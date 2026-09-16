@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cv41p1tmxrav4"]
+
+[ext_resource type="ArrayMesh" uid="uid://b1uo0ecn4py7d" path="res://Forms/d4.mesh" id="1_7h1rt"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_itntr"]
+bounce = 0.5
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_sikmb"]
+points = PackedVector3Array(0.942809, -0.33333334, -0.00015985966, -0.47140452, -0.33333334, 0.8164966, -0.47140452, -0.33333334, -0.8164966, -4.6163797e-05, 1.0000001, -0.00015985966)
+
+[node name="Dado_D4" type="RigidBody3D" unique_id=159289073]
+mass = 3.0
+physics_material_override = SubResource("PhysicsMaterial_itntr")
+
+[node name="VisualDado" type="MeshInstance3D" parent="." unique_id=36102533]
+mesh = ExtResource("1_7h1rt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1699139815]
+visible = false
+shape = SubResource("ConvexPolygonShape3D_sikmb")
+
+[node name="Faces" type="Node3D" parent="." unique_id=1161922341]
+
+[node name="1" type="Marker3D" parent="Faces" unique_id=1384448549]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.006)
+
+[node name="2" type="Marker3D" parent="Faces" unique_id=1635620682]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91077554, -0.31619573, 0)
+
+[node name="3" type="Marker3D" parent="Faces" unique_id=139887230]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.49462953, -0.30917263, -0.8011162)
+
+[node name="4" type="Marker3D" parent="Faces" unique_id=1936188456]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.462, -0.3258357, 0.797)

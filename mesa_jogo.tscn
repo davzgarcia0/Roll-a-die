@@ -1,0 +1,209 @@
+[gd_scene format=3 uid="uid://bdijti4xxymli"]
+
+[ext_resource type="Script" uid="uid://dmicksmrwpet4" path="res://mesa_jogo.gd" id="1_0np0b"]
+[ext_resource type="Material" uid="uid://b2gaeueocl3b5" path="res://skins/cenarios/mesa_NicolasCage.tres" id="2_a5paj"]
+[ext_resource type="Texture2D" uid="uid://c5u056h5v1asn" path="res://skins/cenarios/NicolasCage.jpg" id="3_ute3h"]
+[ext_resource type="Texture2D" uid="uid://7iljiu71qxsp" path="res://Icons/return.png" id="4_ute3h"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_plaxu"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vq4cq"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a5paj"]
+material = ExtResource("2_a5paj")
+size = Vector3(20, 10, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0evby"]
+size = Vector3(20, 10, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6m6gd"]
+albedo_texture = ExtResource("3_ute3h")
+uv1_scale = Vector3(2.3, 2.3, 2.3)
+uv1_offset = Vector3(0.5, 0, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7q8rh"]
+size = Vector3(20, 10, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0np0b"]
+size = Vector3(20, 10, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ute3h"]
+size = Vector3(1, 10, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6m6gd"]
+size = Vector3(1, 10, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_w7hyk"]
+size = Vector3(1, 10, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w7hyk"]
+albedo_texture = ExtResource("3_ute3h")
+uv1_scale = Vector3(2.3, 2.3, 2.3)
+uv1_offset = Vector3(0.2, 1, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5cxtu"]
+size = Vector3(1, 10, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nj788"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ti6qr"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vq4cq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vq4cq"]
+font_size = 48
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0tadt"]
+texture = ExtResource("4_ute3h")
+modulate_color = Color(0.87145245, 0.87325156, 0.87862307, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0np0b"]
+load_path = "res://.godot/imported/aim.png-ff904213ff35d4721fe3589f9dc57589.ctex"
+
+[node name="Mesa_Jogo" type="Node3D" unique_id=2121977375]
+script = ExtResource("1_0np0b")
+
+[node name="Sala_RPG" type="StaticBody3D" parent="." unique_id=496986434]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="VisualMesa" type="MeshInstance3D" parent="Sala_RPG" unique_id=1364335074]
+mesh = SubResource("BoxMesh_plaxu")
+surface_material_override/0 = ExtResource("2_a5paj")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Sala_RPG" unique_id=452375978]
+shape = SubResource("BoxShape3D_vq4cq")
+debug_color = Color(0.7176471, 0.47058824, 0.2784314, 0.5019608)
+
+[node name="VisualParedeNorte" type="MeshInstance3D" parent="Sala_RPG" unique_id=1348296751]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -10)
+cast_shadow = 0
+mesh = SubResource("BoxMesh_a5paj")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Sala_RPG" unique_id=1027974801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -10)
+shape = SubResource("BoxShape3D_0evby")
+
+[node name="VisualParedeSul" type="MeshInstance3D" parent="Sala_RPG" unique_id=561527177]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 10)
+material_override = SubResource("StandardMaterial3D_6m6gd")
+cast_shadow = 0
+mesh = SubResource("BoxMesh_7q8rh")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Sala_RPG" unique_id=342595001]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 10)
+shape = SubResource("BoxShape3D_0np0b")
+
+[node name="VisualParedeLeste" type="MeshInstance3D" parent="Sala_RPG" unique_id=1406651746]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 5, 0)
+cast_shadow = 0
+mesh = SubResource("BoxMesh_ute3h")
+surface_material_override/0 = ExtResource("2_a5paj")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Sala_RPG" unique_id=1200425025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 5, 0)
+shape = SubResource("BoxShape3D_6m6gd")
+
+[node name="VisualParedeOeste" type="MeshInstance3D" parent="Sala_RPG" unique_id=1460898635]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 5, 0)
+cast_shadow = 0
+mesh = SubResource("BoxMesh_w7hyk")
+surface_material_override/0 = SubResource("StandardMaterial3D_w7hyk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sala_RPG" unique_id=1279365216]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 5, 0)
+shape = SubResource("BoxShape3D_5cxtu")
+
+[node name="VisualTeto" type="MeshInstance3D" parent="Sala_RPG" unique_id=1145918977]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008589268, 10.008272, -0.002462864)
+cast_shadow = 0
+mesh = SubResource("BoxMesh_nj788")
+surface_material_override/0 = ExtResource("2_a5paj")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Sala_RPG" unique_id=1323445921]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
+shape = SubResource("BoxShape3D_ti6qr")
+
+[node name="PlayerCamera" type="CharacterBody3D" parent="." unique_id=1313215960]
+transform = Transform3D(0.6888241, 0, 0.7249285, 0, 1, 0, -0.7249285, 0, 0.6888241, 6, 8, 6)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerCamera" unique_id=238792895]
+shape = SubResource("SphereShape3D_vq4cq")
+
+[node name="SuporteRotacao" type="Node3D" parent="PlayerCamera" unique_id=120385646]
+
+[node name="Camera3D" type="Camera3D" parent="PlayerCamera" unique_id=564813590]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1168837689]
+transform = Transform3D(0.9832091, -0.12903482, 0.12903477, 4.3406825e-09, 0.70710677, 0.7071068, -0.18248273, -0.6952338, 0.6952338, -2.5385268, 7.8389034, -0.78295994)
+light_angular_distance = 40.0
+shadow_enabled = true
+shadow_blur = 10.0
+directional_shadow_split_2 = 0.4
+directional_shadow_split_3 = 0.8
+directional_shadow_blend_splits = true
+directional_shadow_fade_start = 0.2
+directional_shadow_max_distance = 25.0
+directional_shadow_pancake_size = 10.0
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=330416897]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextoResultado" type="Label" parent="MarginContainer" unique_id=1305222679]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 0
+text = "Roll a Die"
+label_settings = SubResource("LabelSettings_vq4cq")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=753628891]
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 1
+
+[node name="BotaoRetorno" type="Button" parent="MarginContainer/HBoxContainer" unique_id=2043739980]
+custom_minimum_size = Vector2(200, 200)
+custom_maximum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_styles/normal = SubResource("StyleBoxTexture_0tadt")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_0tadt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0tadt")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_0tadt")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0tadt")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_0tadt")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_0tadt")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_0tadt")
+icon_alignment = 2
+vertical_icon_alignment = 2
+expand_icon = true
+
+[node name="Espacador" type="MarginContainer" parent="MarginContainer/HBoxContainer" unique_id=1250099367]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="BotaoReset" type="Button" parent="MarginContainer/HBoxContainer" unique_id=1251173198]
+custom_minimum_size = Vector2(200, 200)
+custom_maximum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+offset_transform_enabled = true
+icon = SubResource("CompressedTexture2D_0np0b")
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/BotaoRetorno" to="." method="_on_botao_retorno_pressed"]

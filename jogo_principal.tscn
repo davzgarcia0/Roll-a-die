@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b5nbpwmpfwp3h"]
+
+[ext_resource type="Script" uid="uid://bbowutmokvhig" path="res://jogo_principal.gd" id="1_fm7dc"]
+[ext_resource type="PackedScene" uid="uid://bdijti4xxymli" path="res://mesa_jogo.tscn" id="2_8oj0n"]
+[ext_resource type="PackedScene" uid="uid://bth6b3i6svcga" path="res://MenuPrincipal.tscn" id="3_cgtlp"]
+
+[node name="JogoPrincipal" type="Node" unique_id=1103601415]
+script = ExtResource("1_fm7dc")
+
+[node name="Mesa_Jogo" parent="." unique_id=2121977375 instance=ExtResource("2_8oj0n")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1612045640]
+
+[node name="MenuPrincipal" parent="CanvasLayer" unique_id=1173091369 instance=ExtResource("3_cgtlp")]

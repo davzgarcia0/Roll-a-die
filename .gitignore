@@ -1,0 +1,16 @@
+# Pastas ignoradas pelo Godot
+.godot/
+export_presets.cfg
+*.translation
+
+# Ignorar builds e arquivos de sistema
+/build/
+.DS_Store
+Thumbs.db
+
+# Arquivos de Exportacao e Build Android
+android/build/
+builds/
+*.apk
+*.aab
+*.aar
