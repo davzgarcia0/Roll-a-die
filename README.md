@@ -1,4 +1,3 @@
-<img width="1077" height="2309" alt="Screenshot_20260926-212339" src="https://github.com/user-attachments/assets/068535da-faa1-4289-b165-c014fc24ba7e" /># 🎲 Roll-a-Die - RPG Dice Roller
 
 Um aplicativo mobile de rolagem de dados para RPG de mesa, projetado para oferecer uma experiência imersiva que combina uma interface medieval 2D responsiva com uma sala de física 3D para a rolagem real dos dados. 
 
@@ -23,4 +22,4 @@ Um aplicativo mobile de rolagem de dados para RPG de mesa, projetado para oferec
 <img width="1080" height="2328" alt="Screenshot_20260926-212402" src="https://github.com/user-attachments/assets/e98f6174-2d55-48d7-92da-14278f043b36" />
 reenshot_20260926-212339.png…]()
 <img width="1077" height="2314" alt="Screenshot_20260926-212324" src="https://github.com/user-attachments/assets/1498e5dd-8751-433b-a9ae-a6aeb9444d39" />
-
+<img width="1077" height="2309" alt="Screenshot_20260926-212339" src="https://github.com/user-attachments/assets/068535da-faa1-4289-b165-c014fc24ba7e" /># 🎲 Roll-a-Die - RPG Dice Roller
