@@ -1,4 +1,4 @@
-# 🎲 Roll-a-Die - RPG Dice Roller
+<img width="1077" height="2309" alt="Screenshot_20260926-212339" src="https://github.com/user-attachments/assets/068535da-faa1-4289-b165-c014fc24ba7e" /># 🎲 Roll-a-Die - RPG Dice Roller
 
 Um aplicativo mobile de rolagem de dados para RPG de mesa, projetado para oferecer uma experiência imersiva que combina uma interface medieval 2D responsiva com uma sala de física 3D para a rolagem real dos dados. 
 
@@ -19,8 +19,8 @@ Um aplicativo mobile de rolagem de dados para RPG de mesa, projetado para oferec
 
 ## Prints
 
-<img width="2408" height="1080" alt="Screenshot_20260926-212433" src="https://github.com/user-attachments/assets/7c8109ba-089e-40d9-b9aa-b0a8c164b27f" />
-<img width="1080" height="2408" alt="Screenshot_20260926-212402" src="https://github.com/user-attachments/assets/e5fe1e91-3e40-4feb-9166-733b98e82361" />
-<img width="1080" height="2408" alt="Screenshot_20260926-212339" src="https://github.com/user-attachments/assets/afb2c49f-9698-4353-a7c4-0707778ce3f6" />
-<img width="1080" height="2408" alt="Screenshot_20260926-212324" src="https://github.com/user-attachments/assets/bdfdcc35-1510-4496-98f5-96fee93989c9" />
+![Uploading Sc<img width="2408" height="1022" alt="Screenshot_20260926-212433" src="https://github.com/user-attachments/assets/6419ce89-07e3-4236-8485-428566852b8d" />
+<img width="1080" height="2328" alt="Screenshot_20260926-212402" src="https://github.com/user-attachments/assets/e98f6174-2d55-48d7-92da-14278f043b36" />
+reenshot_20260926-212339.png…]()
+<img width="1077" height="2314" alt="Screenshot_20260926-212324" src="https://github.com/user-attachments/assets/1498e5dd-8751-433b-a9ae-a6aeb9444d39" />
 
