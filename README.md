@@ -18,8 +18,8 @@ Um aplicativo mobile de rolagem de dados para RPG de mesa, projetado para oferec
 
 ## Prints
 
-![Uploading Sc<img width="2408" height="1022" alt="Screenshot_20260926-212433" src="https://github.com/user-attachments/assets/6419ce89-07e3-4236-8485-428566852b8d" />
-<img width="1080" height="2328" alt="Screenshot_20260926-212402" src="https://github.com/user-attachments/assets/e98f6174-2d55-48d7-92da-14278f043b36" />
-reenshot_20260926-212339.png…]()
-<img width="1077" height="2314" alt="Screenshot_20260926-212324" src="https://github.com/user-attachments/assets/1498e5dd-8751-433b-a9ae-a6aeb9444d39" />
-<img width="1077" height="2309" alt="Screenshot_20260926-212339" src="https://github.com/user-attachments/assets/068535da-faa1-4289-b165-c014fc24ba7e" /># 🎲 Roll-a-Die - RPG Dice Roller
+<img width="2408" height="1022" alt="Screenshot_20260926-212433" src="https://github.com/user-attachments/assets/7c61c71a-6a78-4489-b993-373b5b2bbb11" />
+<img width="1080" height="2328" alt="Screenshot_20260926-212402" src="https://github.com/user-attachments/assets/58d1114a-63c2-481d-b066-286c0e7708e6" />
+<img width="1077" height="2309" alt="Screenshot_20260926-212339" src="https://github.com/user-attachments/assets/faa76dee-a990-413f-b173-6d37fe9b1525" />
+<img width="1077" height="2314" alt="Screenshot_20260926-212324" src="https://github.com/user-attachments/assets/9c9e9734-f959-4bed-ba8f-675c28a67258" />
+
