@@ -16,6 +16,7 @@ mass = 3.0
 physics_material_override = SubResource("PhysicsMaterial_0np0b")
 freeze = true
 freeze_mode = 1
+continuous_cd = true
 angular_damp = 1.0
 
 [node name="VisualDado" type="MeshInstance3D" parent="." unique_id=522169874]

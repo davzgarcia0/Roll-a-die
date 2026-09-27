@@ -11,6 +11,7 @@ points = PackedVector3Array(0.942809, -0.33333334, -0.00015985966, -0.47140452, 
 [node name="Dado_D4" type="RigidBody3D" unique_id=159289073]
 mass = 3.0
 physics_material_override = SubResource("PhysicsMaterial_itntr")
+continuous_cd = true
 
 [node name="VisualDado" type="MeshInstance3D" parent="." unique_id=36102533]
 mesh = ExtResource("1_7h1rt")

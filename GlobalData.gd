@@ -27,9 +27,13 @@ var contador_rolagens: int = 0
 
 # Função para zerar tudo após a rolagem ou ao clicar em RESET
 func limpar_dados():
-	for dado in dados_para_rolar.keys():
-		dados_para_rolar[dado] = 0
+	# Reseta os contadores de dados
+	for chave in dados_para_rolar.keys():
+		dados_para_rolar[chave] = 0
+	
 	modificador_total = 0
+
+	
 
 # Função para calcular o d% clássico usando dois d10 (numerados de 1 a 10)
 func calcular_resultado_porcentagem(face_dezena: int, face_unidade: int) -> int:

@@ -12,6 +12,7 @@ config_version=5
 
 config/name="Roll a die"
 run/main_scene="uid://b5nbpwmpfwp3h"
+config/quit_on_go_back=false
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://Icons/icon.svg"
 
