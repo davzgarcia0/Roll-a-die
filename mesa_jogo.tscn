@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://bdijti4xxymli"]
 
 [ext_resource type="Script" uid="uid://dmicksmrwpet4" path="res://mesa_jogo.gd" id="1_0np0b"]
-[ext_resource type="Material" uid="uid://b2gaeueocl3b5" path="res://skins/cenarios/mesa_NicolasCage.tres" id="2_a5paj"]
+[ext_resource type="Material" uid="uid://b2gaeueocl3b5" path="res://skins/cenarios/padrao_parede.tres" id="2_a5paj"]
 [ext_resource type="Texture2D" uid="uid://c5u056h5v1asn" path="res://skins/cenarios/NicolasCage.jpg" id="3_ute3h"]
+[ext_resource type="Material" uid="uid://6lsbe4idjfn4" path="res://skins/cenarios/espacial_parede.tres" id="4_1u7ec"]
 [ext_resource type="FontFile" uid="uid://dqjcsclemxvyj" path="res://Fonts/One Slice.otf" id="4_744bc"]
 [ext_resource type="Texture2D" uid="uid://de0q74hfginak" path="res://assets2D/btnplain/Retornar.png" id="4_lxpyo"]
 [ext_resource type="Texture2D" uid="uid://c7n7bclfqd4hm" path="res://assets2D/btnplain/recalibrar.png" id="5_1u7ec"]
@@ -56,12 +57,8 @@ size = Vector3(1, 10, 20)
 size = Vector3(1, 10, 20)
 
 [sub_resource type="BoxMesh" id="BoxMesh_w7hyk"]
+lightmap_size_hint = Vector2i(109, 206)
 size = Vector3(1, 10, 20)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w7hyk"]
-albedo_texture = ExtResource("3_ute3h")
-uv1_scale = Vector3(2.3, 2.3, 2.3)
-uv1_offset = Vector3(0.2, 1, 0)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5cxtu"]
 size = Vector3(1, 10, 20)
@@ -224,7 +221,7 @@ shape = SubResource("BoxShape3D_6m6gd")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 5, 0)
 cast_shadow = 0
 mesh = SubResource("BoxMesh_w7hyk")
-surface_material_override/0 = SubResource("StandardMaterial3D_w7hyk")
+surface_material_override/0 = ExtResource("4_1u7ec")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sala_RPG" unique_id=1279365216]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 5, 0)

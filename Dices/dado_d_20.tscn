@@ -1,5 +1,7 @@
 [gd_scene format=4 uid="uid://dapwyjen2d3f0"]
 
+[ext_resource type="Script" uid="uid://vnv55rmqgo21" path="res://dado_fisica.gd" id="1_x3ees"]
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gbro5"]
 bounce = 0.5
 
@@ -41,6 +43,9 @@ points = PackedVector3Array(0.5255784, 0.85048425, -0.00016647577, 0.85048425, -
 mass = 3.0
 physics_material_override = SubResource("PhysicsMaterial_gbro5")
 continuous_cd = true
+contact_monitor = true
+max_contacts_reported = 3
+script = ExtResource("1_x3ees")
 
 [node name="VisualDado" type="MeshInstance3D" parent="." unique_id=1428898796]
 mesh = SubResource("ArrayMesh_epv3r")
@@ -110,3 +115,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.74234426, -0.28355026, 0)
 
 [node name="20" type="Marker3D" parent="Faces" unique_id=881368578]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45879397, 0.45879397, 0.45879397)
+
+[node name="SomImpacto" type="AudioStreamPlayer3D" parent="." unique_id=859543152]
+bus = &"Efeitos"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

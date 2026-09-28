@@ -19,6 +19,7 @@ config/icon="res://Icons/icon.svg"
 [autoload]
 
 GlobalData="*uid://uym5g4cep3ub"
+AudioManager="*uid://cvrlk50kbetom"
 
 [display]
 

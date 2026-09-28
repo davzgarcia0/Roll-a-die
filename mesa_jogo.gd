@@ -12,6 +12,9 @@ var caminhos_cenas = {
 	"d20": "res://Dices/dado_d_20.tscn"
 }
 
+var material_dado_atual: Material = null
+var malhas_dado_atual: Dictionary = {} # NOVO: Guarda as malhas (meshes) da skin
+
 # Referências aos nós físicos da cena
 @onready var camera_fisica = $PlayerCamera
 @onready var camera_visual = $PlayerCamera/Camera3D
@@ -60,6 +63,8 @@ func _ready():
 	
 	if texto_resultado:
 		texto_resultado.text = ""
+
+	aplicar_skin_completa("padrao")
 
 # ==========================================
 # LÓGICA DO MENU FLUTUANTE (MODO PAISAGEM)
@@ -157,7 +162,30 @@ func _preparar_dado(dado_node):
 	dado_node.visible = false
 	dado_node.freeze = true
 	dado_node.physics_interpolation_mode = Node.PHYSICS_INTERPOLATION_MODE_ON
+	dado_node.contact_monitor = true
+	dado_node.max_contacts_reported = 5
+	
+	# --- APLICA A TEXTURA E A MALHA AO NOVO DADO ---
+	var tipo_dado = dado_node.get_meta("tipo_dado") if dado_node.has_meta("tipo_dado") else ""
+	var malha_nova = malhas_dado_atual.get(tipo_dado, null)
+	_aplicar_visual_seguro(dado_node, material_dado_atual, malha_nova)
+		
 	dados_instanciados.append(dado_node)
+
+
+# Função Caçadora Atualizada (Troca material e também a malha se existir)
+func _aplicar_visual_seguro(no_raiz: Node, material: Material, nova_malha: Mesh = null):
+	if no_raiz == null: 
+		return
+		
+	var malha_node = _buscar_mesh_instance(no_raiz)
+	if malha_node != null:
+		if material != null:
+			malha_node.set_surface_override_material(0, material)
+		if nova_malha != null:
+			malha_node.mesh = nova_malha # Aqui a mágica de trocar o modelo 3D acontece!
+	else:
+		print("AVISO: Nenhuma malha 3D encontrada dentro de: ", no_raiz.name)
 
 func limpar_mesa():
 	for dado in get_tree().get_nodes_in_group("dados_na_mesa"):
@@ -181,17 +209,24 @@ func _gerar_dados_da_formula_atual():
 	if GlobalData.tipo_rolagem_atual == GlobalData.TipoRolagem.SISTEMA_D20:
 		var cena_d20 = load(caminhos_cenas["d20"])
 		if GlobalData.d20_estado_atual != GlobalData.EstadoD20.NORMAL:
-			for i in range(2): _preparar_dado(cena_d20.instantiate())
+			for i in range(2): 
+				var d_novo = cena_d20.instantiate()
+				d_novo.set_meta("tipo_dado", "d20")
+				_preparar_dado(d_novo)
 		else:
-			_preparar_dado(cena_d20.instantiate())
+			var d_novo = cena_d20.instantiate()
+			d_novo.set_meta("tipo_dado", "d20")
+			_preparar_dado(d_novo)
 	else:
 		if GlobalData.dados_para_rolar["d%"] > 0:
 			var cena_d10 = load(caminhos_cenas["d10"])
 			var d_dez = cena_d10.instantiate()
 			d_dez.set_meta("funcao", "dezena")
+			d_dez.set_meta("tipo_dado", "d10") # Etiqueta adicionada
 			_preparar_dado(d_dez)
 			var d_uni = cena_d10.instantiate()
 			d_uni.set_meta("funcao", "unidade")
+			d_uni.set_meta("tipo_dado", "d10") # Etiqueta adicionada
 			_preparar_dado(d_uni)
 		else:
 			for chave_dado in GlobalData.dados_para_rolar.keys():
@@ -199,7 +234,9 @@ func _gerar_dados_da_formula_atual():
 				if qtd > 0 and chave_dado != "d%":
 					var cena_carregada = load(caminhos_cenas[chave_dado])
 					for i in range(qtd):
-						_preparar_dado(cena_carregada.instantiate())
+						var d_novo = cena_carregada.instantiate()
+						d_novo.set_meta("tipo_dado", chave_dado) # Etiqueta adicionada
+						_preparar_dado(d_novo)
 
 # A função original agora fica bem menor e mais limpa
 func iniciar_rolagem_pelo_menu():
@@ -513,14 +550,61 @@ func calcular_resultado_dado():
 	if cena_mestre.has_node("CanvasLayer/MenuPrincipal"):
 		cena_mestre.get_node("CanvasLayer/MenuPrincipal").atualizar_historico()
 
-func trocar_skin_dado(nome_da_skin: String):
-	var caminho = "res://skins/dados/" + nome_da_skin + ".tres"
-	var novo_material = load(caminho)
-	if novo_material:
+# ==========================================
+# SISTEMA DE SKINS (CENÁRIO, DADOS E ÁUDIO)
+# ==========================================
+func aplicar_skin_completa(nome_da_skin: String):
+	AudioManager.trocar_audio_skin(nome_da_skin)
+	
+	var mat_dado = load("res://skins/dados/" + nome_da_skin + "_dado.tres")
+	var mat_mesa = load("res://skins/cenarios/" + nome_da_skin + "_mesa.tres")
+	var mat_parede = load("res://skins/cenarios/" + nome_da_skin + "_parede.tres")
+	
+	# ==========================================
+	# CARREGA AS MALHAS 3D (SE NÃO FOR A PADRÃO)
+	# ==========================================
+	malhas_dado_atual.clear()
+	if nome_da_skin != "padrao":
+		# Se os arquivos .res não existirem, o Godot retorna 'null', mas não quebra o jogo.
+		malhas_dado_atual["d4"] = load("res://skins/dados/" + nome_da_skin + "_malha_d4.res")
+		malhas_dado_atual["d6"] = load("res://skins/dados/" + nome_da_skin + "_malha_d6.res")
+		malhas_dado_atual["d8"] = load("res://skins/dados/" + nome_da_skin + "_malha_d8.res")
+		malhas_dado_atual["d10"] = load("res://skins/dados/" + nome_da_skin + "_malha_d10.res")
+		malhas_dado_atual["d12"] = load("res://skins/dados/" + nome_da_skin + "_malha_d12.res")
+		malhas_dado_atual["d20"] = load("res://skins/dados/" + nome_da_skin + "_malha_d20.res")
+	
+	# Aplica nos dados que já estão na mesa
+	if mat_dado or not malhas_dado_atual.is_empty():
+		material_dado_atual = mat_dado
 		for d_inst in dados_instanciados:
-			if d_inst.has_node("VisualDado"):
-				d_inst.get_node("VisualDado").set_surface_override_material(0, novo_material)
+			if is_instance_valid(d_inst):
+				var tipo_dado = d_inst.get_meta("tipo_dado") if d_inst.has_meta("tipo_dado") else ""
+				var malha_nova = malhas_dado_atual.get(tipo_dado, null)
+				_aplicar_visual_seguro(d_inst, mat_dado, malha_nova)
+				
+	# Aplica no cenário
+	if mat_mesa: _aplicar_visual_seguro(visual_mesa, mat_mesa)
+	if mat_parede:
+		_aplicar_visual_seguro(parede_norte, mat_parede)
+		_aplicar_visual_seguro(parede_sul, mat_parede)
+		_aplicar_visual_seguro(parede_leste, mat_parede)
+		_aplicar_visual_seguro(parede_oeste, mat_parede)
+		_aplicar_visual_seguro(teto, mat_parede)
 
-
+# ==========================================
+# FUNÇÃO CAÇADORA DE MALHA 3D
+# ==========================================
+# Função recursiva que vasculha "filhos" e "netos" até achar o modelo 3D
+func _buscar_mesh_instance(no_atual: Node) -> MeshInstance3D:
+	if no_atual is MeshInstance3D:
+		return no_atual
+		
+	for filho in no_atual.get_children():
+		var resultado = _buscar_mesh_instance(filho)
+		if resultado != null:
+			return resultado
+			
+	return null
+	
 func _on_botao_recalibrar_pressed() -> void:
 	recalibrar_marco_zero()

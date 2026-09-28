@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cvrlk50kbetom"]
+
+[ext_resource type="Script" uid="uid://bwsrbv8l0bnwb" path="res://audio_manager.gd" id="1_jisk1"]
+[ext_resource type="AudioStream" uid="uid://d0a1vpya38anf" path="res://sons/click.mp3" id="2_bq1v2"]
+
+[node name="AudioManager" type="Node" unique_id=578444573]
+script = ExtResource("1_jisk1")
+
+[node name="PlayerAmbiente" type="AudioStreamPlayer" parent="." unique_id=126771825]
+bus = &"Musica"
+
+[node name="PlayerUI" type="AudioStreamPlayer" parent="." unique_id=221454172]
+stream = ExtResource("2_bq1v2")
+bus = &"Efeitos"

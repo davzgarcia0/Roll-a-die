@@ -943,7 +943,6 @@ text = "Donate"
 icon_alignment = 1
 
 [node name="ConfigPanel" type="ColorRect" parent="VBoxContainer/MenuPanel" unique_id=256292022]
-visible = false
 z_index = 1
 layout_mode = 2
 color = Color(0, 0, 0, 0.6901961)
@@ -1016,13 +1015,14 @@ theme_override_font_sizes/font_size = 30
 text = "Musica"
 vertical_alignment = 1
 
-[node name="Mbar" type="HSlider" parent="VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaMusica" unique_id=1158629244]
+[node name="slidemusica" type="HSlider" parent="VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaMusica" unique_id=1158629244]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_vertical = 4
 offset_transform_enabled = true
-value = 100.0
-rounded = true
+max_value = 1.0
+step = 0.05
+value = 0.5
 tick_count = 10
 ticks_position = 3
 
@@ -1053,12 +1053,14 @@ text = "EfeitosSonoros
 "
 vertical_alignment = 1
 
-[node name="Sbar" type="HSlider" parent="VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaEfeitos" unique_id=639855151]
+[node name="slideefeitos" type="HSlider" parent="VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaEfeitos" unique_id=639855151]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_vertical = 4
 offset_transform_enabled = true
-value = 100.0
+max_value = 1.0
+step = 0.05
+value = 0.5
 tick_count = 10
 ticks_position = 3
 
@@ -1120,7 +1122,13 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = SubResource("FontVariation_vq4cq")
 theme_override_font_sizes/font_size = 25
-text = "Versão 0.0.0.2 26/09/2026:
+text = "Versão 0.0.0.3 27/09/2026:
+
+- Implementação de sons
+- Configurado comportamento dos botões de mute / unmute e volume no menu config.
+- configurado comportamento de skins padrão e espacial
+
+Versão 0.0.0.2 26/09/2026:
 
 - Corrigido o dimencionamento da tela de menu/sala 3d
 - Corrigido o comportamento do botão return
@@ -1232,7 +1240,7 @@ layout_mode = 2
 size_flags_vertical = 0
 alignment = 1
 
-[node name="Button" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsAdquiridas/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1024603894]
+[node name="skinPadrao" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsAdquiridas/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1024603894]
 layout_mode = 2
 toggle_mode = true
 icon = ExtResource("40_imat1")
@@ -1240,7 +1248,7 @@ flat = true
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="Button2" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsAdquiridas/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=194922753]
+[node name="skinEspacial" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsAdquiridas/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=194922753]
 layout_mode = 2
 toggle_mode = true
 icon = ExtResource("40_imat1")
@@ -1686,5 +1694,11 @@ vertical_alignment = 1
 [connection signal="pressed" from="VBoxContainer/MenuPanel/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/FundoBotoesInferiores/BotoesInferiores/BtnSkins" to="." method="_on_btn_skins_pressed"]
 [connection signal="pressed" from="VBoxContainer/MenuPanel/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/FundoBotoesInferiores/BotoesInferiores/BtnDonate" to="." method="_on_btn_donate_pressed"]
 [connection signal="pressed" from="VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/btn_fechar_config" to="." method="_on_btn_fechar_config_pressed"]
+[connection signal="toggled" from="VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaMusica/Musica" to="." method="_on_musica_toggled"]
+[connection signal="value_changed" from="VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaMusica/slidemusica" to="." method="_on_slidemusica_value_changed"]
+[connection signal="toggled" from="VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaEfeitos/EfeitosSonoros" to="." method="_on_efeitos_sonoros_toggled"]
+[connection signal="value_changed" from="VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaEfeitos/slideefeitos" to="." method="_on_slideefeitos_value_changed"]
 [connection signal="pressed" from="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/btn_fechar_skins" to="." method="_on_btn_fechar_skins_pressed"]
+[connection signal="pressed" from="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsAdquiridas/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/skinPadrao" to="." method="_on_skin_padrao_pressed"]
+[connection signal="pressed" from="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsAdquiridas/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/skinEspacial" to="." method="_on_skin_espacial_pressed"]
 [connection signal="pressed" from="VBoxContainer/MenuPanel/DonatePanel/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/btn_fechar_donate" to="." method="_on_btn_fechar_donate_pressed"]

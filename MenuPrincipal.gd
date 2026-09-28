@@ -252,3 +252,27 @@ func _on_btn_fechar_skins_pressed() -> void:
 func _on_btn_fechar_donate_pressed() -> void:
 	if painel_donate != null:
 		painel_donate.hide()
+
+
+func _on_skin_padrao_pressed() -> void:
+	get_tree().current_scene.get_node("Mesa_Jogo").aplicar_skin_completa("padrao")
+
+
+func _on_skin_espacial_pressed() -> void:
+	get_tree().current_scene.get_node("Mesa_Jogo").aplicar_skin_completa("espacial")
+
+
+func _on_slidemusica_value_changed(value: float) -> void:
+	AudioManager.alterar_volume_musica(value)
+
+
+func _on_slideefeitos_value_changed(value: float) -> void:
+	AudioManager.alterar_volume_efeitos(value)
+
+
+func _on_efeitos_sonoros_toggled(toggled_on: bool) -> void:
+	AudioManager.mutar_efeitos(toggled_on)
+
+
+func _on_musica_toggled(toggled_on: bool) -> void:
+	AudioManager.mutar_musica(toggled_on)

@@ -16,6 +16,16 @@ func _ready():
 	
 	get_tree().root.size_changed.connect(_on_tela_redimensionada)
 	_on_tela_redimensionada()
+	
+	_conectar_sons_de_clique(self)
+
+func _conectar_sons_de_clique(no_raiz: Node):
+	# BaseButton é a classe "pai" tanto do Button quanto do TextureButton!
+	if no_raiz is BaseButton:
+		no_raiz.pressed.connect(AudioManager.tocar_click)
+		
+	for filho in no_raiz.get_children():
+		_conectar_sons_de_clique(filho)
 
 func iniciar_jogo():
 	jogo_iniciado = true
