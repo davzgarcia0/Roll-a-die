@@ -1,76 +1,81 @@
 [gd_scene format=3 uid="uid://bth6b3i6svcga"]
 
-[ext_resource type="Script" uid="uid://bmiuy6c6ce3wc" path="res://MenuPrincipal.gd" id="1_5p25b"]
-[ext_resource type="FontFile" uid="uid://bb7q1tr31ns6l" path="res://Fonts/dum1.ttf" id="1_8rh5y"]
-[ext_resource type="Texture2D" uid="uid://nfq38rl1pbvs" path="res://assets2D/fundos/fundopincipal.png" id="2_10go4"]
-[ext_resource type="Texture2D" uid="uid://cuwrjfmof244g" path="res://assets2D/btnlateral/1x/btnesquerdo.png" id="3_mg4w5"]
-[ext_resource type="Texture2D" uid="uid://b0vganweu7qwc" path="res://assets2D/fundos/MarcaDagua.png" id="3_vd20o"]
-[ext_resource type="Texture2D" uid="uid://djk1ka23n4506" path="res://assets2D/btnlateral/1x/btnesquerdopressed.png" id="4_vghw2"]
-[ext_resource type="Texture2D" uid="uid://dqxk0gnu5asv3" path="res://assets2D/fundos/fundosistema.png" id="5_jm1nc"]
-[ext_resource type="Texture2D" uid="uid://pcxltoiqb5fy" path="res://assets2D/btn/btndown.png" id="7_3kgkn"]
-[ext_resource type="Texture2D" uid="uid://fly3iptns4yn" path="res://assets2D/btn/btndowpressed.png" id="8_s20ck"]
-[ext_resource type="Texture2D" uid="uid://d344gx1orubso" path="res://assets2D/btn/btnsisd20.png" id="9_qer0m"]
-[ext_resource type="Texture2D" uid="uid://bstgatvrs1ata" path="res://assets2D/btn/btnsisd20pressed.png" id="10_gpmlq"]
-[ext_resource type="Texture2D" uid="uid://gi5yr2nkpp6e" path="res://assets2D/btn/btnup.png" id="11_2tcpk"]
-[ext_resource type="Texture2D" uid="uid://b524vlkphpudw" path="res://assets2D/btn/btnuppressed.png" id="12_mucpb"]
-[ext_resource type="Texture2D" uid="uid://hjmfkdplq5i2" path="res://assets2D/fundos/fundocd.png" id="13_3f082"]
-[ext_resource type="Texture2D" uid="uid://bvgl8240rkj1k" path="res://assets2D/btn/btn.png" id="15_8w2bw"]
-[ext_resource type="Texture2D" uid="uid://3lixajrw5jjr" path="res://assets2D/btn/btnpressed.png" id="16_8hdf0"]
-[ext_resource type="FontFile" uid="uid://dqjcsclemxvyj" path="res://Fonts/One Slice.otf" id="17_ndh07"]
-[ext_resource type="Texture2D" uid="uid://bg5eqmgvwydvp" path="res://assets2D/fundos/transicao.png" id="17_oo2cf"]
-[ext_resource type="Texture2D" uid="uid://dv8aw0c0bopih" path="res://assets2D/fundos/fndtitulohist.png" id="18_q02oq"]
-[ext_resource type="Texture2D" uid="uid://dlsp6pbihjc7a" path="res://assets2D/d4/d4.png" id="19_v43f0"]
-[ext_resource type="Texture2D" uid="uid://i1vlj32j48lm" path="res://assets2D/d4/d4pressed.png" id="20_mwomn"]
-[ext_resource type="Texture2D" uid="uid://crqmaaw2530co" path="res://assets2D/d6/d6.png" id="21_3u8qy"]
-[ext_resource type="Texture2D" uid="uid://d3sbqxtj1twst" path="res://assets2D/d6/d6pressed.png" id="22_3h2xg"]
-[ext_resource type="Texture2D" uid="uid://ddt1kmqk103eh" path="res://assets2D/d8/d8.png" id="23_43dsr"]
-[ext_resource type="Texture2D" uid="uid://cb3d5n0vphhgf" path="res://assets2D/d8/d8pressed.png" id="24_gl8mq"]
-[ext_resource type="Texture2D" uid="uid://clskei5u11527" path="res://assets2D/d10/d10.png" id="25_rgbjw"]
-[ext_resource type="Texture2D" uid="uid://uehp5sxjnrqw" path="res://assets2D/d10/d10pressed.png" id="26_0bjl0"]
-[ext_resource type="Texture2D" uid="uid://qd1nnk0hb24v" path="res://assets2D/d12/d12.png" id="27_3kapw"]
-[ext_resource type="Texture2D" uid="uid://dlnu5po5ke7qk" path="res://assets2D/d12/d12pressed.png" id="28_fk2uc"]
-[ext_resource type="Texture2D" uid="uid://ckt5o3fsgk2nl" path="res://assets2D/d20/d20.png" id="29_dt82k"]
-[ext_resource type="Texture2D" uid="uid://cxsjmqqo21rdu" path="res://assets2D/d20/d20pressed.png" id="30_enujl"]
-[ext_resource type="Texture2D" uid="uid://dbaqvgo0ksbh4" path="res://assets2D/d%/d%.png" id="31_sml5h"]
-[ext_resource type="Texture2D" uid="uid://b1xwcb56sj2pj" path="res://assets2D/d%/d%pressed.png" id="32_2rhj1"]
-[ext_resource type="Texture2D" uid="uid://6csxjvk2vse0" path="res://assets2D/fundos/fundoCalc.png" id="33_rpj1d"]
-[ext_resource type="Texture2D" uid="uid://dcanyc2bi1crg" path="res://assets2D/btnplay/btnPlay.png" id="34_kl0hp"]
-[ext_resource type="Texture2D" uid="uid://cy6fwplfjaobn" path="res://assets2D/btnplay/btnplaypressed.png" id="35_vtn6l"]
-[ext_resource type="Texture2D" uid="uid://kgoyitwq6g41" path="res://assets2D/fundos/fundorodape.png" id="37_gtfuk"]
-[ext_resource type="Texture2D" uid="uid://ddvt7ch4636q6" path="res://assets2D/btnconfig/btnconfig.png" id="38_auxew"]
-[ext_resource type="Texture2D" uid="uid://b43f71th1jhah" path="res://assets2D/btnconfig/btnconfigpressed.png" id="39_cbif1"]
-[ext_resource type="Texture2D" uid="uid://wdfsgoimmcsi" path="res://assets2D/btn/GoBack.png" id="40_10go4"]
-[ext_resource type="Texture2D" uid="uid://b7ylm7m4sn2fk" path="res://Icons/icon.svg" id="40_imat1"]
+[ext_resource type="Script" uid="uid://bmiuy6c6ce3wc" path="res://MenuPrincipal.gd" id="1_14bf1"]
+[ext_resource type="Texture2D" uid="uid://nfq38rl1pbvs" path="res://assets2D/fundos/fundopincipal.png" id="2_248as"]
+[ext_resource type="Texture2D" uid="uid://cuwrjfmof244g" path="res://assets2D/btnlateral/1x/btnesquerdo.png" id="3_hoihk"]
+[ext_resource type="Texture2D" uid="uid://djk1ka23n4506" path="res://assets2D/btnlateral/1x/btnesquerdopressed.png" id="4_kakhf"]
+[ext_resource type="Texture2D" uid="uid://dqxk0gnu5asv3" path="res://assets2D/fundos/fundosistema.png" id="5_4ncej"]
+[ext_resource type="FontFile" uid="uid://bb7q1tr31ns6l" path="res://Fonts/dum1.ttf" id="6_xdp41"]
+[ext_resource type="Texture2D" uid="uid://pcxltoiqb5fy" path="res://assets2D/btn/btndown.png" id="7_7xlx7"]
+[ext_resource type="Texture2D" uid="uid://fly3iptns4yn" path="res://assets2D/btn/btndowpressed.png" id="8_8ssys"]
+[ext_resource type="Texture2D" uid="uid://d344gx1orubso" path="res://assets2D/btn/btnsisd20.png" id="9_wesc0"]
+[ext_resource type="Texture2D" uid="uid://bstgatvrs1ata" path="res://assets2D/btn/btnsisd20pressed.png" id="10_xoexj"]
+[ext_resource type="Texture2D" uid="uid://gi5yr2nkpp6e" path="res://assets2D/btn/btnup.png" id="11_47ggn"]
+[ext_resource type="Texture2D" uid="uid://b524vlkphpudw" path="res://assets2D/btn/btnuppressed.png" id="12_rh8i3"]
+[ext_resource type="Texture2D" uid="uid://hjmfkdplq5i2" path="res://assets2D/fundos/fundocd.png" id="13_osrpe"]
+[ext_resource type="FontFile" uid="uid://dqjcsclemxvyj" path="res://Fonts/One Slice.otf" id="14_pml4m"]
+[ext_resource type="Texture2D" uid="uid://bvgl8240rkj1k" path="res://assets2D/btn/btn.png" id="15_nnnv0"]
+[ext_resource type="Texture2D" uid="uid://3lixajrw5jjr" path="res://assets2D/btn/btnpressed.png" id="16_rqn6s"]
+[ext_resource type="Texture2D" uid="uid://bg5eqmgvwydvp" path="res://assets2D/fundos/transicao.png" id="17_xdd6t"]
+[ext_resource type="Texture2D" uid="uid://dv8aw0c0bopih" path="res://assets2D/fundos/fndtitulohist.png" id="18_cawxe"]
+[ext_resource type="Texture2D" uid="uid://dlsp6pbihjc7a" path="res://assets2D/d4/d4.png" id="19_rc15h"]
+[ext_resource type="Texture2D" uid="uid://i1vlj32j48lm" path="res://assets2D/d4/d4pressed.png" id="20_vyaxe"]
+[ext_resource type="Texture2D" uid="uid://crqmaaw2530co" path="res://assets2D/d6/d6.png" id="21_sbdj5"]
+[ext_resource type="Texture2D" uid="uid://d3sbqxtj1twst" path="res://assets2D/d6/d6pressed.png" id="22_6eux1"]
+[ext_resource type="Texture2D" uid="uid://ddt1kmqk103eh" path="res://assets2D/d8/d8.png" id="23_peux5"]
+[ext_resource type="Texture2D" uid="uid://cb3d5n0vphhgf" path="res://assets2D/d8/d8pressed.png" id="24_eiv1s"]
+[ext_resource type="Texture2D" uid="uid://clskei5u11527" path="res://assets2D/d10/d10.png" id="25_rgxl1"]
+[ext_resource type="Texture2D" uid="uid://uehp5sxjnrqw" path="res://assets2D/d10/d10pressed.png" id="26_mahcp"]
+[ext_resource type="Texture2D" uid="uid://qd1nnk0hb24v" path="res://assets2D/d12/d12.png" id="27_tia1g"]
+[ext_resource type="Texture2D" uid="uid://dlnu5po5ke7qk" path="res://assets2D/d12/d12pressed.png" id="28_cy0of"]
+[ext_resource type="Texture2D" uid="uid://ckt5o3fsgk2nl" path="res://assets2D/d20/d20.png" id="29_1bldl"]
+[ext_resource type="Texture2D" uid="uid://cxsjmqqo21rdu" path="res://assets2D/d20/d20pressed.png" id="30_54p67"]
+[ext_resource type="Texture2D" uid="uid://dbaqvgo0ksbh4" path="res://assets2D/d%/d%.png" id="31_wejha"]
+[ext_resource type="Texture2D" uid="uid://b1xwcb56sj2pj" path="res://assets2D/d%/d%pressed.png" id="32_d3li6"]
+[ext_resource type="Texture2D" uid="uid://6csxjvk2vse0" path="res://assets2D/fundos/fundoCalc.png" id="33_rnct2"]
+[ext_resource type="Texture2D" uid="uid://dcanyc2bi1crg" path="res://assets2D/btnplay/btnPlay.png" id="34_31bxs"]
+[ext_resource type="Texture2D" uid="uid://cy6fwplfjaobn" path="res://assets2D/btnplay/btnplaypressed.png" id="35_wcpd7"]
+[ext_resource type="Texture2D" uid="uid://b0vganweu7qwc" path="res://assets2D/fundos/MarcaDagua.png" id="36_ufk8i"]
+[ext_resource type="Texture2D" uid="uid://kgoyitwq6g41" path="res://assets2D/fundos/fundorodape.png" id="37_g1xuf"]
+[ext_resource type="Texture2D" uid="uid://ddvt7ch4636q6" path="res://assets2D/btnconfig/btnconfig.png" id="38_qjqmv"]
+[ext_resource type="Texture2D" uid="uid://b43f71th1jhah" path="res://assets2D/btnconfig/btnconfigpressed.png" id="39_ba38h"]
+[ext_resource type="Texture2D" uid="uid://wdfsgoimmcsi" path="res://assets2D/btn/GoBack.png" id="40_4ga7k"]
+[ext_resource type="Texture2D" uid="uid://cq1ce8w5iy8if" path="res://assets2D/btn/audio.png" id="41_lejyc"]
+[ext_resource type="Texture2D" uid="uid://duk2vber1ygsf" path="res://assets2D/btn/audiomute.png" id="42_28wee"]
+[ext_resource type="Texture2D" uid="uid://b7o32oji4cmfo" path="res://assets2D/btn/slide.png" id="43_4pnne"]
+[ext_resource type="Texture2D" uid="uid://c4dnufv0lirmt" path="res://assets2D/btn/check.png" id="44_ofv36"]
+[ext_resource type="Texture2D" uid="uid://clojtgs87sdes" path="res://assets2D/btn/uncheck.png" id="45_0enk4"]
+[ext_resource type="Texture2D" uid="uid://b7ylm7m4sn2fk" path="res://Icons/icon.svg" id="46_68lsc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4ton2"]
-texture = ExtResource("2_10go4")
+texture = ExtResource("2_248as")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gfgny"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_064ha"]
-texture = ExtResource("3_mg4w5")
+texture = ExtResource("3_hoihk")
 expand_margin_left = 20.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8pggx"]
-texture = ExtResource("4_vghw2")
+texture = ExtResource("4_kakhf")
 expand_margin_left = 20.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1nvhs"]
-texture = ExtResource("5_jm1nc")
+texture = ExtResource("5_4ncej")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dnsvd"]
 content_margin_left = 15.0
 content_margin_top = 10.0
 content_margin_right = 15.0
 content_margin_bottom = 50.0
-texture = ExtResource("7_3kgkn")
+texture = ExtResource("7_7xlx7")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pn730"]
 content_margin_left = 15.0
 content_margin_top = 10.0
 content_margin_right = 15.0
 content_margin_bottom = 50.0
-texture = ExtResource("8_s20ck")
+texture = ExtResource("8_8ssys")
 expand_margin_left = 30.0
 expand_margin_top = 30.0
 expand_margin_right = 30.0
@@ -81,12 +86,12 @@ content_margin_left = 10.0
 content_margin_top = 10.0
 content_margin_right = 10.0
 content_margin_bottom = 10.0
-texture = ExtResource("9_qer0m")
+texture = ExtResource("9_wesc0")
 axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nk7mb"]
-texture = ExtResource("10_gpmlq")
+texture = ExtResource("10_xoexj")
 expand_margin_left = 30.0
 expand_margin_top = 30.0
 expand_margin_right = 30.0
@@ -97,14 +102,14 @@ content_margin_left = 15.0
 content_margin_top = 10.0
 content_margin_right = 15.0
 content_margin_bottom = 50.0
-texture = ExtResource("11_2tcpk")
+texture = ExtResource("11_47ggn")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1q7ee"]
 content_margin_left = 15.0
 content_margin_top = 10.0
 content_margin_right = 15.0
 content_margin_bottom = 50.0
-texture = ExtResource("12_mucpb")
+texture = ExtResource("12_rh8i3")
 expand_margin_left = 30.0
 expand_margin_top = 30.0
 expand_margin_right = 30.0
@@ -115,14 +120,14 @@ content_margin_left = 20.0
 content_margin_top = 15.0
 content_margin_right = 20.0
 content_margin_bottom = 15.0
-texture = ExtResource("13_3f082")
+texture = ExtResource("13_osrpe")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0tadt"]
 content_margin_left = 30.0
 content_margin_top = 15.0
 content_margin_right = 30.0
 content_margin_bottom = 15.0
-texture = ExtResource("15_8w2bw")
+texture = ExtResource("15_nnnv0")
 region_rect = Rect2(0, 0, 336, 296)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h6jrf"]
@@ -130,10 +135,10 @@ content_margin_left = 30.0
 content_margin_top = 15.0
 content_margin_right = 30.0
 content_margin_bottom = 15.0
-texture = ExtResource("16_8hdf0")
+texture = ExtResource("16_rqn6s")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_plaxu"]
-texture = ExtResource("17_oo2cf")
+texture = ExtResource("17_xdd6t")
 texture_margin_left = 100.0
 texture_margin_right = 100.0
 expand_margin_left = 70.0
@@ -141,7 +146,7 @@ expand_margin_right = 70.0
 region_rect = Rect2(0, 0, 1528, 59)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_myr8e"]
-texture = ExtResource("18_q02oq")
+texture = ExtResource("18_cawxe")
 texture_margin_left = 80.0
 texture_margin_top = 20.0
 texture_margin_right = 80.0
@@ -158,14 +163,14 @@ content_margin_left = 15.0
 content_margin_top = 10.0
 content_margin_right = 15.0
 content_margin_bottom = 10.0
-texture = ExtResource("33_rpj1d")
+texture = ExtResource("33_rnct2")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hlglb"]
 content_margin_left = 30.0
 content_margin_top = 15.0
 content_margin_right = 30.0
 content_margin_bottom = 15.0
-texture = ExtResource("15_8w2bw")
+texture = ExtResource("15_nnnv0")
 region_rect = Rect2(0, 0, 336, 296)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pvwos"]
@@ -173,7 +178,7 @@ content_margin_left = 30.0
 content_margin_top = 15.0
 content_margin_right = 30.0
 content_margin_bottom = 15.0
-texture = ExtResource("15_8w2bw")
+texture = ExtResource("15_nnnv0")
 region_rect = Rect2(0, 0, 336, 296)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pryjb"]
@@ -181,21 +186,21 @@ content_margin_left = 30.0
 content_margin_top = 15.0
 content_margin_right = 30.0
 content_margin_bottom = 15.0
-texture = ExtResource("16_8hdf0")
+texture = ExtResource("16_rqn6s")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hcqtu"]
 content_margin_left = 30.0
 content_margin_top = 15.0
 content_margin_right = 30.0
 content_margin_bottom = 15.0
-texture = ExtResource("16_8hdf0")
+texture = ExtResource("16_rqn6s")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_36v6q"]
 content_margin_left = 30.0
 content_margin_top = 15.0
 content_margin_right = 30.0
 content_margin_bottom = 15.0
-texture = ExtResource("15_8w2bw")
+texture = ExtResource("15_nnnv0")
 region_rect = Rect2(0, 0, 336, 296)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hd23m"]
@@ -203,7 +208,7 @@ content_margin_left = 30.0
 content_margin_top = 15.0
 content_margin_right = 30.0
 content_margin_bottom = 15.0
-texture = ExtResource("15_8w2bw")
+texture = ExtResource("15_nnnv0")
 region_rect = Rect2(0, 0, 336, 296)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1yh6n"]
@@ -211,20 +216,20 @@ content_margin_left = 30.0
 content_margin_top = 15.0
 content_margin_right = 30.0
 content_margin_bottom = 15.0
-texture = ExtResource("16_8hdf0")
+texture = ExtResource("16_rqn6s")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cekw2"]
 content_margin_left = 30.0
 content_margin_top = 15.0
 content_margin_right = 30.0
 content_margin_bottom = 15.0
-texture = ExtResource("16_8hdf0")
+texture = ExtResource("16_rqn6s")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gtjnc"]
-texture = ExtResource("34_kl0hp")
+texture = ExtResource("34_31bxs")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s2ivw"]
-texture = ExtResource("35_vtn6l")
+texture = ExtResource("35_wcpd7")
 expand_margin_left = 70.0
 expand_margin_top = 70.0
 expand_margin_right = 70.0
@@ -237,7 +242,7 @@ content_margin_left = 45.0
 content_margin_top = 15.0
 content_margin_right = 45.0
 content_margin_bottom = 15.0
-texture = ExtResource("18_q02oq")
+texture = ExtResource("18_cawxe")
 axis_stretch_horizontal = 2
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_21kww"]
@@ -245,14 +250,14 @@ content_margin_left = 20.0
 content_margin_top = 50.0
 content_margin_right = 20.0
 content_margin_bottom = 30.0
-texture = ExtResource("33_rpj1d")
+texture = ExtResource("33_rnct2")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7g1k8"]
 content_margin_left = 15.0
 content_margin_top = 15.0
 content_margin_right = 15.0
 content_margin_bottom = 15.0
-texture = ExtResource("37_gtfuk")
+texture = ExtResource("37_g1xuf")
 expand_margin_left = 20.0
 expand_margin_top = 10.0
 expand_margin_right = 20.0
@@ -263,21 +268,21 @@ content_margin_left = 20.0
 content_margin_top = 20.0
 content_margin_right = 20.0
 content_margin_bottom = 20.0
-texture = ExtResource("38_auxew")
+texture = ExtResource("38_qjqmv")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i46kr"]
 content_margin_left = 20.0
 content_margin_top = 20.0
 content_margin_right = 20.0
 content_margin_bottom = 20.0
-texture = ExtResource("38_auxew")
+texture = ExtResource("38_qjqmv")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v5q6a"]
 content_margin_left = 20.0
 content_margin_top = 20.0
 content_margin_right = 20.0
 content_margin_bottom = 20.0
-texture = ExtResource("39_cbif1")
+texture = ExtResource("39_ba38h")
 modulate_color = Color(0.5370987, 0.5370987, 0.5370987, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uskc0"]
@@ -285,28 +290,51 @@ content_margin_left = 20.0
 content_margin_top = 20.0
 content_margin_right = 20.0
 content_margin_bottom = 20.0
-texture = ExtResource("38_auxew")
+texture = ExtResource("38_qjqmv")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y7ldl"]
 content_margin_left = 20.0
 content_margin_top = 20.0
 content_margin_right = 20.0
 content_margin_bottom = 20.0
-texture = ExtResource("38_auxew")
+texture = ExtResource("38_qjqmv")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_snpak"]
-texture = ExtResource("33_rpj1d")
+texture = ExtResource("33_rnct2")
 texture_margin_top = 30.0
 texture_margin_bottom = 30.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ctsbx"]
-texture = ExtResource("40_10go4")
+texture = ExtResource("40_4ga7k")
 modulate_color = Color(1, 1, 1, 0.3529412)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_646k1"]
+texture = ExtResource("41_lejyc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_76tjw"]
+texture = ExtResource("42_28wee")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2a2so"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+texture = ExtResource("43_4pnne")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pn24s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q31jn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vq4cq"]
+texture = ExtResource("44_ofv36")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dbejy"]
+texture = ExtResource("45_0enk4")
 
 [sub_resource type="FontVariation" id="FontVariation_vq4cq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_66g61"]
-texture = ExtResource("40_10go4")
+texture = ExtResource("40_4ga7k")
 modulate_color = Color(1, 1, 1, 0.3529412)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lwmrk"]
@@ -322,7 +350,7 @@ modulate_color = Color(1, 1, 1, 0.3529412)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ctsbx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_egb3i"]
-texture = ExtResource("40_10go4")
+texture = ExtResource("40_4ga7k")
 modulate_color = Color(1, 1, 1, 0.3529412)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0vwea"]
@@ -334,7 +362,7 @@ modulate_color = Color(1, 1, 1, 0.3529412)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eetjr"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7q8rh"]
-texture = ExtResource("33_rpj1d")
+texture = ExtResource("33_rnct2")
 
 [node name="MenuPrincipal" type="Control" unique_id=1173091369]
 propagate_maximum_size = true
@@ -347,7 +375,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
 offset_transform_visual_only = false
-script = ExtResource("1_5p25b")
+script = ExtResource("1_14bf1")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=115896740]
 layout_mode = 1
@@ -431,7 +459,7 @@ theme_override_constants/margin_bottom = 15
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.39215687)
-theme_override_fonts/font = ExtResource("1_8rh5y")
+theme_override_fonts/font = ExtResource("6_xdp41")
 theme_override_font_sizes/font_size = 60
 text = "D20 System"
 
@@ -455,7 +483,7 @@ theme_override_colors/font_hover_color = Color(0.8666667, 0.72156864, 0.5058824,
 theme_override_colors/font_hover_pressed_color = Color(0.8666667, 0.72156864, 0.5058824, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 0.1882353)
 theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("1_8rh5y")
+theme_override_fonts/font = ExtResource("6_xdp41")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxTexture_dnsvd")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_dnsvd")
@@ -493,7 +521,7 @@ theme_override_colors/font_hover_color = Color(0.8666667, 0.72156864, 0.5058824,
 theme_override_colors/font_hover_pressed_color = Color(0.8666667, 0.72156864, 0.5058824, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 0.1882353)
 theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("1_8rh5y")
+theme_override_fonts/font = ExtResource("6_xdp41")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxTexture_u1acd")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_u1acd")
@@ -527,7 +555,7 @@ theme_override_colors/font_color = Color(0.87058824, 0.73333335, 0.5176471, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.39215687)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 0.08627451)
 theme_override_constants/outline_size = 7
-theme_override_fonts/font = ExtResource("17_ndh07")
+theme_override_fonts/font = ExtResource("14_pml4m")
 theme_override_font_sizes/font_size = 51
 text = "CD"
 
@@ -541,7 +569,7 @@ theme_override_constants/separation = 9
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("17_ndh07")
+theme_override_fonts/font = ExtResource("14_pml4m")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxTexture_0tadt")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_0tadt")
@@ -561,7 +589,7 @@ size_flags_vertical = 4
 offset_transform_enabled = true
 theme_override_colors/font_color = Color(0.9490196, 0.80784315, 0.6117647, 1)
 theme_override_constants/minimum_character_width = 2
-theme_override_fonts/font = ExtResource("1_8rh5y")
+theme_override_fonts/font = ExtResource("6_xdp41")
 theme_override_font_sizes/font_size = 60
 text = "15"
 alignment = 1
@@ -572,7 +600,7 @@ virtual_keyboard_type = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("17_ndh07")
+theme_override_fonts/font = ExtResource("14_pml4m")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxTexture_0tadt")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_0tadt")
@@ -620,7 +648,7 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_myr8e")
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.39215687)
-theme_override_fonts/font = ExtResource("1_8rh5y")
+theme_override_fonts/font = ExtResource("6_xdp41")
 theme_override_font_sizes/font_size = 60
 text = "FREE ROLL"
 horizontal_alignment = 1
@@ -638,63 +666,63 @@ alignment = 1
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 offset_transform_enabled = true
-texture_normal = ExtResource("19_v43f0")
-texture_pressed = ExtResource("20_mwomn")
-texture_hover = ExtResource("19_v43f0")
+texture_normal = ExtResource("19_rc15h")
+texture_pressed = ExtResource("20_vyaxe")
+texture_hover = ExtResource("19_rc15h")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="D6" type="TextureButton" parent="VBoxContainer/MenuPanel/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/SessaoFreeRoll/PanelContainer/PrateleiraDados" unique_id=769357127]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-texture_normal = ExtResource("21_3u8qy")
-texture_pressed = ExtResource("22_3h2xg")
-texture_hover = ExtResource("21_3u8qy")
+texture_normal = ExtResource("21_sbdj5")
+texture_pressed = ExtResource("22_6eux1")
+texture_hover = ExtResource("21_sbdj5")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="D8" type="TextureButton" parent="VBoxContainer/MenuPanel/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/SessaoFreeRoll/PanelContainer/PrateleiraDados" unique_id=164265470]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-texture_normal = ExtResource("23_43dsr")
-texture_pressed = ExtResource("24_gl8mq")
-texture_hover = ExtResource("23_43dsr")
+texture_normal = ExtResource("23_peux5")
+texture_pressed = ExtResource("24_eiv1s")
+texture_hover = ExtResource("23_peux5")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="D10" type="TextureButton" parent="VBoxContainer/MenuPanel/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/SessaoFreeRoll/PanelContainer/PrateleiraDados" unique_id=2019873915]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-texture_normal = ExtResource("25_rgbjw")
-texture_pressed = ExtResource("26_0bjl0")
-texture_hover = ExtResource("25_rgbjw")
+texture_normal = ExtResource("25_rgxl1")
+texture_pressed = ExtResource("26_mahcp")
+texture_hover = ExtResource("25_rgxl1")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="D12" type="TextureButton" parent="VBoxContainer/MenuPanel/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/SessaoFreeRoll/PanelContainer/PrateleiraDados" unique_id=652462685]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-texture_normal = ExtResource("27_3kapw")
-texture_pressed = ExtResource("28_fk2uc")
-texture_hover = ExtResource("27_3kapw")
+texture_normal = ExtResource("27_tia1g")
+texture_pressed = ExtResource("28_cy0of")
+texture_hover = ExtResource("27_tia1g")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="D20" type="TextureButton" parent="VBoxContainer/MenuPanel/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/SessaoFreeRoll/PanelContainer/PrateleiraDados" unique_id=1927834168]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-texture_normal = ExtResource("29_dt82k")
-texture_pressed = ExtResource("30_enujl")
-texture_hover = ExtResource("29_dt82k")
+texture_normal = ExtResource("29_1bldl")
+texture_pressed = ExtResource("30_54p67")
+texture_hover = ExtResource("29_1bldl")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Dpercent" type="TextureButton" parent="VBoxContainer/MenuPanel/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/SessaoFreeRoll/PanelContainer/PrateleiraDados" unique_id=222818427]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-texture_normal = ExtResource("31_sml5h")
-texture_pressed = ExtResource("32_2rhj1")
-texture_hover = ExtResource("31_sml5h")
+texture_normal = ExtResource("31_wejha")
+texture_pressed = ExtResource("32_d3li6")
+texture_hover = ExtResource("31_wejha")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -708,7 +736,7 @@ alignment = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("17_ndh07")
+theme_override_fonts/font = ExtResource("14_pml4m")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_0tadt")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_0tadt")
@@ -732,7 +760,7 @@ custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.89411765)
-theme_override_fonts/font = ExtResource("1_8rh5y")
+theme_override_fonts/font = ExtResource("6_xdp41")
 theme_override_font_sizes/font_size = 40
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -743,7 +771,7 @@ max_lines_visible = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("17_ndh07")
+theme_override_fonts/font = ExtResource("14_pml4m")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_0tadt")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_0tadt")
@@ -764,7 +792,7 @@ alignment = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("17_ndh07")
+theme_override_fonts/font = ExtResource("14_pml4m")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxTexture_hlglb")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_pvwos")
@@ -824,7 +852,7 @@ layout_mode = 2
 offset_transform_enabled = true
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.39215687)
-theme_override_fonts/font = ExtResource("1_8rh5y")
+theme_override_fonts/font = ExtResource("6_xdp41")
 theme_override_font_sizes/font_size = 40
 text = "LAST ROLLS"
 horizontal_alignment = 1
@@ -842,7 +870,7 @@ layout_mode = 2
 modulate = Color(1, 1, 1, 0.19607843)
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("3_vd20o")
+texture = ExtResource("36_ufk8i")
 expand_mode = 1
 stretch_mode = 5
 
@@ -865,11 +893,11 @@ layout_mode = 2
 mouse_filter = 1
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("1_8rh5y")
-theme_override_fonts/bold_font = ExtResource("1_8rh5y")
-theme_override_fonts/bold_italics_font = ExtResource("1_8rh5y")
-theme_override_fonts/italics_font = ExtResource("1_8rh5y")
-theme_override_fonts/mono_font = ExtResource("1_8rh5y")
+theme_override_fonts/normal_font = ExtResource("6_xdp41")
+theme_override_fonts/bold_font = ExtResource("6_xdp41")
+theme_override_fonts/bold_italics_font = ExtResource("6_xdp41")
+theme_override_fonts/italics_font = ExtResource("6_xdp41")
+theme_override_fonts/mono_font = ExtResource("6_xdp41")
 theme_override_font_sizes/normal_font_size = 45
 theme_override_font_sizes/bold_font_size = 45
 theme_override_font_sizes/bold_italics_font_size = 45
@@ -893,7 +921,7 @@ size_flags_horizontal = 3
 tooltip_text = "CONFIG"
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_8rh5y")
+theme_override_fonts/font = ExtResource("6_xdp41")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxTexture_t2g6c")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_i46kr")
@@ -911,7 +939,7 @@ size_flags_horizontal = 3
 tooltip_text = "SKINS"
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_8rh5y")
+theme_override_fonts/font = ExtResource("6_xdp41")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxTexture_t2g6c")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_i46kr")
@@ -929,7 +957,7 @@ size_flags_horizontal = 3
 tooltip_text = "DONATE"
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_8rh5y")
+theme_override_fonts/font = ExtResource("6_xdp41")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxTexture_t2g6c")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_i46kr")
@@ -977,7 +1005,7 @@ theme_override_constants/margin_bottom = 30
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer" unique_id=595392262]
 layout_mode = 2
-theme_override_constants/separation = 9
+theme_override_constants/separation = 30
 
 [node name="btn_fechar_config" type="Button" parent="VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=712577938]
 custom_minimum_size = Vector2(100, 100)
@@ -992,16 +1020,23 @@ icon_alignment = 1
 [node name="LinhaMusica" type="HBoxContainer" parent="VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1963635923]
 layout_mode = 2
 size_flags_vertical = 0
+theme_override_constants/separation = 30
 alignment = 1
 
 [node name="Musica" type="Button" parent="VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaMusica" unique_id=441779087]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 offset_transform_enabled = true
+theme_override_styles/normal = SubResource("StyleBoxTexture_646k1")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_646k1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_76tjw")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_76tjw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_646k1")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_646k1")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_76tjw")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_76tjw")
 toggle_mode = true
 keep_pressed_outside = true
-icon = ExtResource("40_imat1")
-flat = true
 icon_alignment = 1
 expand_icon = true
 
@@ -1010,16 +1045,20 @@ layout_mode = 2
 size_flags_horizontal = 3
 offset_transform_enabled = true
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_8rh5y")
-theme_override_font_sizes/font_size = 30
-text = "Musica"
+theme_override_fonts/font = ExtResource("6_xdp41")
+theme_override_font_sizes/font_size = 40
+text = "Musica Ambiente"
 vertical_alignment = 1
+max_lines_visible = 1
 
 [node name="slidemusica" type="HSlider" parent="VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaMusica" unique_id=1158629244]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_vertical = 4
 offset_transform_enabled = true
+theme_override_styles/slider = SubResource("StyleBoxTexture_2a2so")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_pn24s")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_q31jn")
 max_value = 1.0
 step = 0.05
 value = 0.5
@@ -1029,16 +1068,23 @@ ticks_position = 3
 [node name="LinhaEfeitos" type="HBoxContainer" parent="VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1621664031]
 layout_mode = 2
 size_flags_vertical = 0
+theme_override_constants/separation = 30
 alignment = 1
 
 [node name="EfeitosSonoros" type="Button" parent="VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaEfeitos" unique_id=299944812]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 offset_transform_enabled = true
+theme_override_styles/normal = SubResource("StyleBoxTexture_646k1")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_646k1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_76tjw")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_76tjw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_646k1")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_646k1")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_76tjw")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_76tjw")
 toggle_mode = true
 keep_pressed_outside = true
-icon = ExtResource("40_imat1")
-flat = true
 icon_alignment = 1
 expand_icon = true
 
@@ -1047,17 +1093,20 @@ layout_mode = 2
 size_flags_horizontal = 3
 offset_transform_enabled = true
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_8rh5y")
-theme_override_font_sizes/font_size = 30
-text = "EfeitosSonoros
-"
+theme_override_fonts/font = ExtResource("6_xdp41")
+theme_override_font_sizes/font_size = 40
+text = "Efeitos Sonoros"
 vertical_alignment = 1
+max_lines_visible = 1
 
 [node name="slideefeitos" type="HSlider" parent="VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaEfeitos" unique_id=639855151]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_vertical = 4
 offset_transform_enabled = true
+theme_override_styles/slider = SubResource("StyleBoxTexture_2a2so")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_pn24s")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_q31jn")
 max_value = 1.0
 step = 0.05
 value = 0.5
@@ -1072,15 +1121,27 @@ alignment = 1
 [node name="Animacoes" type="Label" parent="VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaAnimacoes" unique_id=1834276917]
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("6_xdp41")
+theme_override_font_sizes/font_size = 40
+text = "Animações  "
 
-[node name="onoff" type="CheckButton" parent="VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaAnimacoes" unique_id=1132187533]
+[node name="onoff" type="Button" parent="VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaAnimacoes" unique_id=772894734]
+custom_minimum_size = Vector2(80, 40)
 layout_mode = 2
 offset_transform_enabled = true
-theme_override_fonts/font = ExtResource("1_8rh5y")
+theme_override_fonts/font = ExtResource("6_xdp41")
 theme_override_font_sizes/font_size = 50
-button_pressed = true
-text = "Animações"
+theme_override_styles/normal = SubResource("StyleBoxTexture_vq4cq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_vq4cq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dbejy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_dbejy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vq4cq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_vq4cq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_dbejy")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_dbejy")
+toggle_mode = true
+text = "
+"
 
 [node name="Avaliacao" type="LinkButton" parent="VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=587272024]
 layout_mode = 2
@@ -1099,7 +1160,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/PainelHistorico/VBoxContainer" unique_id=1279934213]
 layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource("1_8rh5y")
+theme_override_fonts/font = ExtResource("6_xdp41")
 theme_override_font_sizes/font_size = 40
 text = "Historico de versões"
 horizontal_alignment = 1
@@ -1122,7 +1183,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = SubResource("FontVariation_vq4cq")
 theme_override_font_sizes/font_size = 25
-text = "Versão 0.0.0.3 27/09/2026:
+text = "Versão 0.0.0.4 39/09/2026:
+- Identação de arquivos internos
+- implementação de skins padrão
+
+Versão 0.0.0.3 27/09/2026:
 
 - Implementação de sons
 - Configurado comportamento dos botões de mute / unmute e volume no menu config.
@@ -1220,7 +1285,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_44oc5")
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_8rh5y")
+theme_override_fonts/font = ExtResource("6_xdp41")
 theme_override_font_sizes/font_size = 40
 text = "Skins adquiridas:"
 horizontal_alignment = 1
@@ -1243,7 +1308,7 @@ alignment = 1
 [node name="skinPadrao" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsAdquiridas/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1024603894]
 layout_mode = 2
 toggle_mode = true
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 flat = true
 icon_alignment = 1
 vertical_icon_alignment = 0
@@ -1251,23 +1316,25 @@ vertical_icon_alignment = 0
 [node name="skinEspacial" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsAdquiridas/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=194922753]
 layout_mode = 2
 toggle_mode = true
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 flat = true
 icon_alignment = 1
 vertical_icon_alignment = 0
 
 [node name="Button3" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsAdquiridas/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1966162375]
 layout_mode = 2
+disabled = true
 toggle_mode = true
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 flat = true
 icon_alignment = 1
 vertical_icon_alignment = 0
 
 [node name="Button4" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsAdquiridas/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=884557681]
 layout_mode = 2
+disabled = true
 toggle_mode = true
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 flat = true
 icon_alignment = 1
 vertical_icon_alignment = 0
@@ -1279,32 +1346,36 @@ alignment = 1
 
 [node name="Button" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsAdquiridas/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=148762029]
 layout_mode = 2
+disabled = true
 toggle_mode = true
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 flat = true
 icon_alignment = 1
 vertical_icon_alignment = 0
 
 [node name="Button2" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsAdquiridas/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=2072428099]
 layout_mode = 2
+disabled = true
 toggle_mode = true
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 flat = true
 icon_alignment = 1
 vertical_icon_alignment = 0
 
 [node name="Button3" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsAdquiridas/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1090550687]
 layout_mode = 2
+disabled = true
 toggle_mode = true
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 flat = true
 icon_alignment = 1
 vertical_icon_alignment = 0
 
 [node name="Button4" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsAdquiridas/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=81885289]
 layout_mode = 2
+disabled = true
 toggle_mode = true
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 flat = true
 icon_alignment = 1
 vertical_icon_alignment = 0
@@ -1328,7 +1399,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_plaxu")
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_8rh5y")
+theme_override_fonts/font = ExtResource("6_xdp41")
 theme_override_font_sizes/font_size = 40
 text = "Skins Disponiveis:"
 horizontal_alignment = 1
@@ -1350,29 +1421,33 @@ alignment = 1
 
 [node name="Button" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2044424307]
 layout_mode = 2
+disabled = true
 toggle_mode = true
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 flat = true
 icon_alignment = 1
 
 [node name="Button2" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=598844878]
 layout_mode = 2
+disabled = true
 toggle_mode = true
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 flat = true
 icon_alignment = 1
 
 [node name="Button3" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=809227480]
 layout_mode = 2
+disabled = true
 toggle_mode = true
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 flat = true
 icon_alignment = 1
 
 [node name="Button4" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2047976704]
 layout_mode = 2
+disabled = true
 toggle_mode = true
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 flat = true
 icon_alignment = 1
 
@@ -1383,29 +1458,33 @@ alignment = 1
 
 [node name="Button" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=860849106]
 layout_mode = 2
+disabled = true
 toggle_mode = true
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 flat = true
 icon_alignment = 1
 
 [node name="Button2" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=491398095]
 layout_mode = 2
+disabled = true
 toggle_mode = true
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 flat = true
 icon_alignment = 1
 
 [node name="Button3" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1042443987]
 layout_mode = 2
+disabled = true
 toggle_mode = true
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 flat = true
 icon_alignment = 1
 
 [node name="Button4" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=719492715]
 layout_mode = 2
+disabled = true
 toggle_mode = true
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 flat = true
 icon_alignment = 1
 
@@ -1428,7 +1507,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_ctsbx")
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_8rh5y")
+theme_override_fonts/font = ExtResource("6_xdp41")
 theme_override_font_sizes/font_size = 40
 text = "Prévia"
 horizontal_alignment = 1
@@ -1451,34 +1530,34 @@ layout_mode = 2
 
 [node name="Button" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Previa/VBoxContainer/MarginContainer/HBoxContainer/ScrollContainer/HBoxContainer" unique_id=48037299]
 layout_mode = 2
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 flat = true
 
 [node name="Button2" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Previa/VBoxContainer/MarginContainer/HBoxContainer/ScrollContainer/HBoxContainer" unique_id=1800635720]
 layout_mode = 2
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 flat = true
 
 [node name="Button3" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Previa/VBoxContainer/MarginContainer/HBoxContainer/ScrollContainer/HBoxContainer" unique_id=17395682]
 layout_mode = 2
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 flat = true
 
 [node name="Button4" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Previa/VBoxContainer/MarginContainer/HBoxContainer/ScrollContainer/HBoxContainer" unique_id=720789108]
 layout_mode = 2
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 flat = true
 
 [node name="Button5" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Previa/VBoxContainer/MarginContainer/HBoxContainer/ScrollContainer/HBoxContainer" unique_id=199627936]
 layout_mode = 2
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 flat = true
 
 [node name="Button" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=984500657]
 layout_mode = 2
 size_flags_vertical = 8
 text = "Dowload"
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 
 [node name="DonatePanel" type="ColorRect" parent="VBoxContainer/MenuPanel" unique_id=1212879736]
 visible = false
@@ -1538,7 +1617,7 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_0vwea")
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_8rh5y")
+theme_override_fonts/font = ExtResource("6_xdp41")
 theme_override_font_sizes/font_size = 40
 text = "Acesso a todas as skins:"
 horizontal_alignment = 1
@@ -1562,13 +1641,13 @@ alignment = 1
 [node name="Label" type="Label" parent="VBoxContainer/MenuPanel/DonatePanel/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaDonate/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1703449642]
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_8rh5y")
+theme_override_fonts/font = ExtResource("6_xdp41")
 theme_override_font_sizes/font_size = 50
 text = "$5 Dola"
 
 [node name="Button" type="Button" parent="VBoxContainer/MenuPanel/DonatePanel/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaDonate/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1559746084]
 layout_mode = 2
-icon = ExtResource("40_imat1")
+icon = ExtResource("46_68lsc")
 flat = true
 vertical_icon_alignment = 0
 
@@ -1590,7 +1669,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_eetjr")
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_8rh5y")
+theme_override_fonts/font = ExtResource("6_xdp41")
 theme_override_font_sizes/font_size = 40
 text = "O que está achando do nosso app?"
 horizontal_alignment = 1
@@ -1611,7 +1690,7 @@ theme_override_constants/separation = 10
 [node name="Label" type="Label" parent="VBoxContainer/MenuPanel/DonatePanel/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaReview/VBoxContainer/MarginContainer/VBoxContainer" unique_id=547883902]
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_8rh5y")
+theme_override_fonts/font = ExtResource("6_xdp41")
 theme_override_font_sizes/font_size = 30
 text = "Assunto:"
 
@@ -1627,7 +1706,7 @@ size_flags_vertical = 0
 [node name="Label2" type="Label" parent="VBoxContainer/MenuPanel/DonatePanel/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaReview/VBoxContainer/MarginContainer/VBoxContainer" unique_id=194713541]
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_8rh5y")
+theme_override_fonts/font = ExtResource("6_xdp41")
 theme_override_font_sizes/font_size = 30
 text = "Texto:"
 
@@ -1667,7 +1746,7 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_7q8rh")
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_8rh5y")
+theme_override_fonts/font = ExtResource("6_xdp41")
 theme_override_font_sizes/font_size = 75
 text = "Ads Aqui"
 horizontal_alignment = 1

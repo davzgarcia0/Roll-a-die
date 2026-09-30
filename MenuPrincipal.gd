@@ -15,6 +15,13 @@ extends Control
 @onready var painel_skins = $VBoxContainer/MenuPanel/SkinPanel
 @onready var painel_donate = $VBoxContainer/MenuPanel/DonatePanel
 
+# --- REFERÊNCIA DOS SLIDERS DE MUSICA ---
+
+@onready var slider_musica = $VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaMusica/slidemusica
+@onready var slider_efeitos = $VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaEfeitos/slideefeitos
+@onready var botao_mute_musica = $VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaMusica/Musica
+@onready var botao_mute_efeitos = $VBoxContainer/MenuPanel/ConfigPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/LinhaEfeitos/EfeitosSonoros
+
 func _ready():
 	# ESPERA CRUCIAL: Aguarda dois frames físicos para dar tempo do Android
 	# carregar o tamanho correto da câmera (Notch) antes de ler a tela.
@@ -30,7 +37,20 @@ func _ready():
 		line_edit_cd.text = str(GlobalData.d20_cd_alvo)
 	else:
 		print("AVISO: line_edit_cd não foi encontrado! Verifique o caminho.")
-
+	
+	# Adicione isso no final da função _ready() do seu script da Interface:
+	
+	if slider_musica != null: 
+		slider_musica.value = AudioManager.volume_musica_atual
+		
+	if slider_efeitos != null: 
+		slider_efeitos.value = AudioManager.volume_efeitos_atual
+		
+	if botao_mute_musica != null: 
+		botao_mute_musica.button_pressed = AudioManager.musica_mutada_atual
+		
+	if botao_mute_efeitos != null: 
+		botao_mute_efeitos.button_pressed = AudioManager.efeitos_mutados_atual
 
 # ==========================================
 # 1. LÓGICA DO FREE ROLL (ROLAGEM LIVRE)
@@ -256,10 +276,12 @@ func _on_btn_fechar_donate_pressed() -> void:
 
 func _on_skin_padrao_pressed() -> void:
 	get_tree().current_scene.get_node("Mesa_Jogo").aplicar_skin_completa("padrao")
+	AudioManager.trocar_audio_skin("padrao") # <--- FORÇA A TROCA DE ÁUDIO IMEDIATA
 
 
 func _on_skin_espacial_pressed() -> void:
 	get_tree().current_scene.get_node("Mesa_Jogo").aplicar_skin_completa("espacial")
+	AudioManager.trocar_audio_skin("espacial") # <--- FORÇA A TROCA DE ÁUDIO IMEDIATAcial")
 
 
 func _on_slidemusica_value_changed(value: float) -> void:

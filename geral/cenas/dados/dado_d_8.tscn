@@ -1,0 +1,86 @@
+[gd_scene format=4 uid="uid://8k2ilg0ro2m2"]
+
+[ext_resource type="Script" uid="uid://vnv55rmqgo21" path="res://dado_fisica.gd" id="1_tti0y"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vq4cq"]
+bounce = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibl7v"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hglec"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAwACAAEAAAACAAQAAwAEAAIAAAAFAAEAAwABAAUAAAAEAAUAAwAFAAQA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("/3////9/AAD/f/9/AAAAAP///3//fwAA/38AAP9/AAD/f/9///8AAAAA/3//fwAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ah1mn"]
+resource_name = "d8_Solid"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"format": 34896613383,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAQABEAEgATABQAFQAWABcA"),
+"material": SubResource("StandardMaterial3D_ibl7v"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/3////9/BOX/f/9/AAAE5f///3//fwTl/3////9/lvEAAP9//3+W8f9//38AAJbx/3////9/SsD/f/9///9KwAAA/3//f0rA/3////9/h/b///9//3+H9v9//3///4f2/38AAP9/Gvv///9//38a+/9//38AABr7/38AAP9/k+H/f/9/AACT4QAA/3//f5Ph/38AAP9/rMgAAP9//3+syP9//3///6zI/38AAP9/veP/f/9///+94////3//f73j/7//P/+//z//v/8/jWRBwo1kQcKNZEHCRIc4t0SHOLdEhzi3m558l5uefJebnnyXrij6yq4o+squKPrKTlhe9E5YXvROWF70/z//v/8//7//P/+/14++WdePvlnXj75Z")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_hglec")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xi2in"]
+points = PackedVector3Array(0, 1, 0, 1, 0, 0, 0, 0, -1, -1, 0, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="Dado_D8" type="RigidBody3D" unique_id=651802766]
+mass = 3.0
+physics_material_override = SubResource("PhysicsMaterial_vq4cq")
+continuous_cd = true
+contact_monitor = true
+max_contacts_reported = 3
+script = ExtResource("1_tti0y")
+
+[node name="VisualDado" type="MeshInstance3D" parent="." unique_id=1087447160]
+mesh = SubResource("ArrayMesh_ah1mn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2033017482]
+visible = false
+shape = SubResource("ConvexPolygonShape3D_xi2in")
+
+[node name="Faces" type="Node3D" parent="." unique_id=1824423318]
+
+[node name="1" type="Marker3D" parent="Faces" unique_id=389229242]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33333334, -0.33333334, -0.33333334)
+
+[node name="2" type="Marker3D" parent="Faces" unique_id=1801772900]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33333334, 0.33333334, 0.33333334)
+
+[node name="3" type="Marker3D" parent="Faces" unique_id=786428921]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33333334, -0.33333334, 0.33333334)
+
+[node name="4" type="Marker3D" parent="Faces" unique_id=1819815081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33333334, 0.33333334, -0.33333334)
+
+[node name="5" type="Marker3D" parent="Faces" unique_id=1228821983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33333334, -0.33333334, 0.33333334)
+
+[node name="6" type="Marker3D" parent="Faces" unique_id=1293015080]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33333334, 0.33333334, -0.33333334)
+
+[node name="7" type="Marker3D" parent="Faces" unique_id=188545018]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33333334, -0.33333334, -0.33333334)
+
+[node name="8" type="Marker3D" parent="Faces" unique_id=589058571]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33333334, 0.33333334, 0.33333334)
+
+[node name="SomImpacto" type="AudioStreamPlayer3D" parent="." unique_id=1184353070]
+bus = &"Efeitos"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

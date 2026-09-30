@@ -20,9 +20,10 @@ func _ready():
 	_conectar_sons_de_clique(self)
 
 func _conectar_sons_de_clique(no_raiz: Node):
-	# BaseButton é a classe "pai" tanto do Button quanto do TextureButton!
 	if no_raiz is BaseButton:
-		no_raiz.pressed.connect(AudioManager.tocar_click)
+		# Se não estiver conectado, conecta!
+		if not no_raiz.pressed.is_connected(AudioManager.tocar_click):
+			no_raiz.pressed.connect(AudioManager.tocar_click)
 		
 	for filho in no_raiz.get_children():
 		_conectar_sons_de_clique(filho)

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cqm2ucmjsakj"]
+
+[ext_resource type="Texture2D" uid="uid://s34206fy13nh" path="res://skins/padrao/dados/d10_mascara.png" id="1_k0ssh"]
+
+[resource]
+resource_name = "Materiais"
+cull_mode = 2
+albedo_texture = ExtResource("1_k0ssh")
+roughness = 0.5
+metadata/_gltf_primary_texture_coord = 0

@@ -1,0 +1,97 @@
+[gd_scene format=4 uid="uid://b7yh8ry8jrs6i"]
+
+[ext_resource type="Script" uid="uid://vnv55rmqgo21" path="res://dado_fisica.gd" id="1_8qm8p"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_p8ttg"]
+bounce = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5jrt4"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0ag47"]
+_surfaces = [{
+"aabb": AABB(-0.93417233, -0.8632175, -0.9517581, 1.8683447, 1.726435, 1.9035162),
+"format": 34896613377,
+"index_count": 108,
+"index_data": PackedByteArray("AAABAAIAAwACAAEAAwAEAAIABAAAAAIAAAAEAAUABAADAAYAAAAFAAcABAAIAAUACAAEAAYACAAHAAUACQAGAAMAAQAJAAMAAQAAAAoABwAKAAAAAQAKAAsADAABAAsACgAMAAsAAQAMAAkACgANAAwADQAJAAwABwAOAAoADQAKAA4ADgAHAA8ABwAQAA8AEAAOAA8AEAANAA4ABwAIABAACQANABEADQAQABEACQARABIABgAJABIAEwARABAAEwAQAAgAEQATABIACAAGABMABgASABMA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("Gs8gjSjtAAD/fwAA5MMAAP9/f1L//wAA5DCkB+eLAADkMCCNKO0AABtP/eutzgAAAADcXmilAADjsP3rrc4AAOQwWvgXdAAAG08BFFExAAD//9xeaKUAABrPpAfniwAA47ABFFExAAAaz95y1hIAAP//IqGWWgAAGs9a+Bd0AAD/f///GjwAAP9/f60AAAAA5DDectYSAAAAACKhlloAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7spmc"]
+resource_name = "d12_Solid"
+_surfaces = [{
+"aabb": AABB(-0.93417233, -0.8632175, -0.9517581, 1.8683447, 1.726435, 1.9035162),
+"format": 34896613383,
+"index_count": 108,
+"index_data": PackedByteArray("AAABAAIAAQAAAAMAAQADAAQABQAGAAcABgAFAAgABgAIAAkACgALAAwACwAKAA0ACwANAA4ADwAQABEAEAAPABIAEAASABMAFAAVABYAFQAUABcAFQAXABgAGQAaABsAGgAZABwAGgAcAB0AHgAfACAAHwAeACEAHwAhACIAIwAkACUAJAAjACYAJAAmACcAKAApACoAKQAoACsAKQArACwALQAuAC8ALgAtADAALgAwADEAMgAzADQAMwAyADUAMwA1ADYANwA4ADkAOAA3ADoAOAA6ADsA"),
+"material": SubResource("StandardMaterial3D_5jrt4"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 60,
+"vertex_data": PackedByteArray("Gs8gjSjtRt//fwAA5MNG3/9/f1L//0bf///cXmilRt8az6QH54tG3/9/f60AAPD0AAAioZZa8PTkMN5y1hLw9P9///8aPPD05DBa+Bd08PQaz95y1hLO9htPARRRMc7247ABFFExzvb/f3+tAADO9uQw3nLWEs72Gs/ectYSut3/f///Gjy63f9/f60AALrd//8ioZZaut0az1r4F3S63eQwWvgXdDX847D9663ONfwbT/3rrc41/P9///8aPDX8Gs9a+Bd0NfzkMCCNKO2Uv+QwpAfni5S/AADcXmillL//f39S//+Uv/9/AADkw5S/5DAgjSjtW7vkMFr4F3RbuxtP/eutzlu7AADcXmilW7sAACKhllpbu+OwARRRMab8/38AAOTDpvwaz6QH54um/BtPARRRMab85DCkB+eLpvzkMCCNKO3VxRrPII0o7dXF/39/Uv//1cUbT/3rrc7VxeOw/eutztXFG08BFFEx+tIAANxeaKX60uQwpAfni/rS5DDectYS+tIAACKhllr60v//IqGWWi7/47D9663OLv8az1r4F3Qu////3F5opS7/Gs8gjSjtLv8az95y1hJd/v//3F5opV3+//8ioZZaXf7jsAEUUTFd/hrPpAfni13+2owrW9qMK1vajCtb2owrW9qMK1vGYNHBxmDRwcZg0cHGYNHBxmDRwR4+y8gePsvIHj7LyB4+y8gePsvIuMS/SLjEv0i4xL9IuMS/SLjEv0ifg1m6n4NZup+DWbqfg1m6n4NZutRMN4XUTDeF1Ew3hdRMN4XUTDeFwoLoz8KC6M/CgujPwoLoz8KC6M/GQej7xkHo+8ZB6PvGQej7xkHo+8KOm5DCjpuQwo6bkMKOm5DCjpuQgGHM/oBhzP6AYcz+gGHM/oBhzP5gqseTYKrHk2Cqx5NgqseTYKrHk2oZOcZqGTnGahk5xmoZOcZqGTnG")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_0ag47")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8a2vq"]
+points = PackedVector3Array(0.93417233, -0.22357804, 0.27799982, 0.35680693, 0.72819185, 0.5848803, 0.57718235, 0.088383436, 0.8116402, 0, -0.30689174, 0.9517581, 0.57718235, -0.8118435, 0.08850533, 0.35680693, -0.7283609, -0.5850667, 0.93417233, 0.22340906, -0.27818614, -0.35698992, 0.72819185, 0.5848803, 0.57718235, 0.8116745, -0.08869159, -0.57736534, 0.088383436, 0.8116402, -0.57736534, -0.8118435, 0.08850533, 0, -0.8632175, 0.5047597, -0.35698992, -0.7283609, -0.5850667, 0.57718235, -0.088552475, -0.8118265, 0, 0.8632175, -0.50494605, -0.57736534, 0.8116745, -0.08869159, -0.93417233, 0.22340906, -0.27818614, -0.93417233, -0.22357804, 0.27799982, -0.57736534, -0.088552475, -0.8118265, 0, 0.30672276, -0.9517581)
+
+[node name="Dado_D12" type="RigidBody3D" unique_id=443880394]
+mass = 3.0
+physics_material_override = SubResource("PhysicsMaterial_p8ttg")
+continuous_cd = true
+contact_monitor = true
+max_contacts_reported = 3
+script = ExtResource("1_8qm8p")
+
+[node name="VisualDado" type="MeshInstance3D" parent="." unique_id=792682247]
+mesh = SubResource("ArrayMesh_7spmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2076814014]
+shape = SubResource("ConvexPolygonShape3D_8a2vq")
+
+[node name="Faces" type="Node3D" parent="." unique_id=751061893]
+
+[node name="1" type="Marker3D" parent="Faces" unique_id=1525010802]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7886343, -0.09763064)
+
+[node name="10" type="Marker3D" parent="Faces" unique_id=1221980293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6759735, -0.32570353, -0.26163492)
+
+[node name="11" type="Marker3D" parent="Faces" unique_id=30501154]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2653645, -0.7490377)
+
+[node name="12" type="Marker3D" parent="Faces" unique_id=1280287179]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7886343, 0.09763064)
+
+[node name="2" type="Marker3D" parent="Faces" unique_id=1724685413]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2653645, 0.7490377)
+
+[node name="3" type="Marker3D" parent="Faces" unique_id=148183545]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6759735, 0.32570353, 0.26163492)
+
+[node name="4" type="Marker3D" parent="Faces" unique_id=433815882]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4177746, -0.42333418, 0.5269994)
+
+[node name="5" type="Marker3D" parent="Faces" unique_id=1105894577]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4177746, 0.42333418, -0.5269994)
+
+[node name="6" type="Marker3D" parent="Faces" unique_id=452003688]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6759735, -0.32570353, -0.26163492)
+
+[node name="7" type="Marker3D" parent="Faces" unique_id=2120547945]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6759735, 0.32570353, 0.26163492)
+
+[node name="8" type="Marker3D" parent="Faces" unique_id=1299797872]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4177746, -0.42333418, 0.5269994)
+
+[node name="9" type="Marker3D" parent="Faces" unique_id=1903425281]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4177746, 0.42333418, -0.5269994)
+
+[node name="SomImpacto" type="AudioStreamPlayer3D" parent="." unique_id=1158443096]
+bus = &"Efeitos"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

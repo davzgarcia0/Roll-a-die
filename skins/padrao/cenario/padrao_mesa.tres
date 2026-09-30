@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dnksybrnknrvc"]
+
+[ext_resource type="Texture2D" uid="uid://61auct21nlsp" path="res://skins/padrao/cenario/wood.jpg" id="1_6cr8c"]
+
+[resource]
+albedo_color = Color(0.48088473, 0.2637622, 1.92523e-07, 1)
+albedo_texture = ExtResource("1_6cr8c")
+albedo_texture_force_srgb = true

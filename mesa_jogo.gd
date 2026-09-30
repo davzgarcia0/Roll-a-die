@@ -4,16 +4,16 @@ extends Node3D
 # CAMINHOS DOS SEUS MODELOS 3D
 # ==========================================
 var caminhos_cenas = {
-	"d4": "res://Dices/dado_d_4.tscn",
-	"d6": "res://Dices/dado_d_6.tscn",
-	"d8": "res://Dices/dado_d_8.tscn",
-	"d10": "res://Dices/dado_d_10.tscn",
-	"d12": "res://Dices/dado_d_12.tscn",
-	"d20": "res://Dices/dado_d_20.tscn"
+	"d4": "res://geral/cenas/dados/dado_d_4.tscn",
+	"d6": "res://geral/cenas/dados/dado_d_6.tscn",
+	"d8": "res://geral/cenas/dados/dado_d_8.tscn",
+	"d10": "res://geral/cenas/dados/dado_d_10.tscn",
+	"d12": "res://geral/cenas/dados/dado_d_12.tscn",
+	"d20": "res://geral/cenas/dados/dado_d_20.tscn"
 }
 
-var material_dado_atual: Material = null
-var malhas_dado_atual: Dictionary = {} # NOVO: Guarda as malhas (meshes) da skin
+var materiais_dado_atual: Dictionary = {} # Guarda os materiais (.tres)
+var malhas_dado_atual: Dictionary = {}    # Guarda as malhas (.res)
 
 # Referências aos nós físicos da cena
 @onready var camera_fisica = $PlayerCamera
@@ -64,7 +64,7 @@ func _ready():
 	if texto_resultado:
 		texto_resultado.text = ""
 
-	aplicar_skin_completa("padrao")
+	aplicar_skin_completa(AudioManager.skin_atual)
 
 # ==========================================
 # LÓGICA DO MENU FLUTUANTE (MODO PAISAGEM)
@@ -163,12 +163,26 @@ func _preparar_dado(dado_node):
 	dado_node.freeze = true
 	dado_node.physics_interpolation_mode = Node.PHYSICS_INTERPOLATION_MODE_ON
 	dado_node.contact_monitor = true
-	dado_node.max_contacts_reported = 5
+	dado_node.max_contacts_reported = 10
 	
-	# --- APLICA A TEXTURA E A MALHA AO NOVO DADO ---
 	var tipo_dado = dado_node.get_meta("tipo_dado") if dado_node.has_meta("tipo_dado") else ""
+	var mat_novo = materiais_dado_atual.get(tipo_dado, null)
 	var malha_nova = malhas_dado_atual.get(tipo_dado, null)
-	_aplicar_visual_seguro(dado_node, material_dado_atual, malha_nova)
+	
+	# ==========================================
+	# ESCURECIMENTO EXCLUSIVO PARA A DEZENA DO D%
+	# ==========================================
+	if dado_node.has_meta("funcao") and dado_node.get_meta("funcao") == "dezena":
+		if mat_novo != null:
+			# Duplica o material para não afetar o dado de unidade
+			mat_novo = mat_novo.duplicate() 
+			
+			# Se for um material padrão 3D, reduz a luz da cor base em 50% (0.5)
+			if mat_novo is StandardMaterial3D:
+				mat_novo.albedo_color = mat_novo.albedo_color.darkened(0.5) 
+	# ==========================================
+	
+	_aplicar_visual_seguro(dado_node, mat_novo, malha_nova)
 		
 	dados_instanciados.append(dado_node)
 
@@ -297,16 +311,11 @@ func _unhandled_input(event):
 			
 			# =========================================================
 			# LÓGICA UNIVERSAL (RETRATO E PAISAGEM)
-			# Se a mesa está vazia, lê o GlobalData e gera os dados
-			# =========================================================
 			if dados_instanciados.is_empty():
 				var tem_dados = false
-				
-				# Verifica se o jogador selecionou o Sistema D20 no menu
 				if GlobalData.tipo_rolagem_atual == GlobalData.TipoRolagem.SISTEMA_D20:
 					tem_dados = true
 				else:
-					# Verifica se tem algum dado na rolagem livre
 					for qtd in GlobalData.dados_para_rolar.values():
 						if qtd > 0: tem_dados = true
 						
@@ -314,41 +323,17 @@ func _unhandled_input(event):
 					_gerar_dados_da_formula_atual()
 			# =========================================================
 
-			# Se mesmo após tentar gerar, não houver dados, o toque é ignorado
 			if dados_instanciados.is_empty():
 				return
 				
-			# INÍCIO DA FÍSICA: Segurar e arrastar os dados
 			segurando_dado = true
 			if texto_resultado: texto_resultado.text = "Rolando..."
 			atualizar_alvo_dado(event.position)
 			
-			for i in range(dados_instanciados.size()):
-				var d_inst = dados_instanciados[i]
-				d_inst.visible = true
-				d_inst.freeze = false
-				d_inst.gravity_scale = 0.0
-				
-				var giro_individual = Vector3(
-					randf_range(4.0, 12.0), randf_range(-15.0, 15.0), randf_range(-15.0, 15.0)
-				)
-				d_inst.set_meta("giro_unico", giro_individual)
-				
-				var altura_da_mao = 2.0
-				var offset_nuvem = Vector3(0, altura_da_mao, 0)
-				
-				if dados_instanciados.size() > 1:
-					var dispersao = 0.4 + (dados_instanciados.size() * 0.3)
-					var desvio_x = randfn(0.0, dispersao)
-					var desvio_y = abs(randfn(0.0, dispersao * 0.5)) + altura_da_mao
-					var desvio_z = randfn(0.0, dispersao)
-					offset_nuvem = Vector3(desvio_x, desvio_y, desvio_z)
-				
-				d_inst.set_meta("offset_nuvem", offset_nuvem)
-				d_inst.global_position = posicao_alvo_3d + offset_nuvem
+			# Chama a nova função que organiza os dados na mão
+			_atualizar_posicao_da_nuvem()
 				
 		else:
-			# (Mantenha o resto da sua função igual: quando ele solta o dedo e a tela arrasta)
 			segurando_dado = false
 			pode_interagir = false
 			
@@ -360,81 +345,49 @@ func _unhandled_input(event):
 	if event is InputEventScreenDrag or event is InputEventMouseMotion:
 		if segurando_dado:
 			atualizar_alvo_dado(event.position)
-			
-			for i in range(dados_instanciados.size()):
-				var d_inst = dados_instanciados[i]
-				d_inst.visible = true
-				d_inst.freeze = false
-				d_inst.gravity_scale = 0.0
-				
-				var giro_individual = Vector3(
-					randf_range(4.0, 12.0), randf_range(-15.0, 15.0), randf_range(-15.0, 15.0)
-				)
-				d_inst.set_meta("giro_unico", giro_individual)
-				
-				var altura_da_mao = 2.0
-				var offset_nuvem = Vector3(0, altura_da_mao, 0)
-				
-				if dados_instanciados.size() > 1:
-					var dispersao = 0.3 + (dados_instanciados.size() * 0.05)
-					var desvio_x = randfn(0.0, dispersao)
-					var desvio_y = abs(randfn(0.0, dispersao * 0.5)) + altura_da_mao
-					var desvio_z = randfn(0.0, dispersao)
-					offset_nuvem = Vector3(desvio_x, desvio_y, desvio_z)
-				
-				d_inst.set_meta("offset_nuvem", offset_nuvem)
-				d_inst.global_position = posicao_alvo_3d + offset_nuvem
-				
-		else:
-			# (Mantenha o resto da sua função igual: quando ele solta o dedo e a tela arrasta)
-			segurando_dado = false
-			pode_interagir = false
-			
-			for d_inst in dados_instanciados:
-				d_inst.gravity_scale = 1.0
-				if d_inst.has_meta("giro_unico"):
-					d_inst.angular_velocity = d_inst.get_meta("giro_unico")
+			# Atualiza a nuvem acompanhando o arrasto do dedo
+			_atualizar_posicao_da_nuvem()
 
-	if event is InputEventScreenDrag or event is InputEventMouseMotion:
-		if segurando_dado:
-			atualizar_alvo_dado(event.position)
-			
-			for i in range(dados_instanciados.size()):
-				var d_inst = dados_instanciados[i]
-				d_inst.visible = true
-				d_inst.freeze = false
-				d_inst.gravity_scale = 0.0
-				
-				var giro_individual = Vector3(
-					randf_range(4.0, 12.0), randf_range(-15.0, 15.0), randf_range(-15.0, 15.0)
-				)
-				d_inst.set_meta("giro_unico", giro_individual)
-				
-				var altura_da_mao = 2.0
-				var offset_nuvem = Vector3(0, altura_da_mao, 0)
-				
-				if dados_instanciados.size() > 1:
-					var dispersao = 0.3 + (dados_instanciados.size() * 0.05)
-					var desvio_x = randfn(0.0, dispersao)
-					var desvio_y = abs(randfn(0.0, dispersao * 0.5)) + altura_da_mao
-					var desvio_z = randfn(0.0, dispersao)
-					offset_nuvem = Vector3(desvio_x, desvio_y, desvio_z)
-				
-				d_inst.set_meta("offset_nuvem", offset_nuvem)
-				d_inst.global_position = posicao_alvo_3d + offset_nuvem
-		else:
-			# Lógica de quando o jogador solta o dedo da tela (Mantenha igual a sua)
-			segurando_dado = false
-			pode_interagir = false
-			
-			for d_inst in dados_instanciados:
-				d_inst.gravity_scale = 1.0
-				if d_inst.has_meta("giro_unico"):
-					d_inst.angular_velocity = d_inst.get_meta("giro_unico")
 
-	if event is InputEventScreenDrag or event is InputEventMouseMotion:
-		if segurando_dado:
-			atualizar_alvo_dado(event.position)
+# ==========================================
+# NOVA FUNÇÃO PARA LIMITAR E ORGANIZAR A NUVEM
+# ==========================================
+func _atualizar_posicao_da_nuvem():
+	for i in range(dados_instanciados.size()):
+		var d_inst = dados_instanciados[i]
+		d_inst.visible = true
+		d_inst.freeze = false
+		d_inst.gravity_scale = 0.0
+		
+		var giro_individual = Vector3(
+			randf_range(4.0, 12.0), randf_range(-15.0, 15.0), randf_range(-15.0, 15.0)
+		)
+		d_inst.set_meta("giro_unico", giro_individual)
+		
+		var altura_da_mao = 2.0
+		var offset_nuvem = Vector3(0, altura_da_mao, 0)
+		
+		if dados_instanciados.size() > 1:
+			# 1. O LIMITE MATEMÁTICO DA DISPERSÃO
+			# O comando min() impede que o multiplicador passe de 1.5,
+			# limitando o tamanho máximo da nuvem não importa quantos dados existam.
+			var dispersao = min(0.3 + (dados_instanciados.size() * 0.05), 3)
+			
+			var desvio_x = randfn(0.0, dispersao)
+			var desvio_y = abs(randfn(0.0, dispersao * 0.5)) + altura_da_mao
+			var desvio_z = randfn(0.0, dispersao)
+			offset_nuvem = Vector3(desvio_x, desvio_y, desvio_z)
+		
+		d_inst.set_meta("offset_nuvem", offset_nuvem)
+		
+		# 2. O LIMITE FÍSICO DO ESPAÇO
+		# Utiliza as constantes LIMITE_X e LIMITE_Z que você já definiu 
+		# para garantir que os dados nunca nasçam fora da área da mesa.
+		var pos_final = posicao_alvo_3d + offset_nuvem
+		pos_final.x = clampf(pos_final.x, LIMITE_X_MIN, LIMITE_X_MAX)
+		pos_final.z = clampf(pos_final.z, LIMITE_Z_MIN, LIMITE_Z_MAX)
+		
+		d_inst.global_position = pos_final
 
 func atualizar_alvo_dado(posicao_tela):
 	var plano_mesa = Plane(Vector3.UP, 4.0)
@@ -507,8 +460,8 @@ func calcular_resultado_dado():
 			escolhido = valores_rolados[0] if valores_rolados.size() > 0 else 0
 			texto_final = "Rolou: " + str(escolhido)
 			
-		if escolhido >= cd: texto_final += " | 🟢 SUCESSO"
-		else: texto_final += " | 🔴 FALHA"
+		if escolhido >= cd: texto_final += "  🟢 SUCESSO"
+		else: texto_final += "  🔴 FALHA"
 		
 		linha_historico = "Roll %d: 1d20%s [b][%d][/b] NAT %s" % [num_roll, texto_vantagem, escolhido, str(valores_rolados)]
 
@@ -554,35 +507,53 @@ func calcular_resultado_dado():
 # SISTEMA DE SKINS (CENÁRIO, DADOS E ÁUDIO)
 # ==========================================
 func aplicar_skin_completa(nome_da_skin: String):
-	AudioManager.trocar_audio_skin(nome_da_skin)
+	AudioManager.skin_atual = nome_da_skin
+	AudioManager.salvar_configuracoes()
 	
-	var mat_dado = load("res://skins/dados/" + nome_da_skin + "_dado.tres")
-	var mat_mesa = load("res://skins/cenarios/" + nome_da_skin + "_mesa.tres")
-	var mat_parede = load("res://skins/cenarios/" + nome_da_skin + "_parede.tres")
-	
-	# ==========================================
-	# CARREGA AS MALHAS 3D (SE NÃO FOR A PADRÃO)
-	# ==========================================
+	# Limpa a memória das skins anteriores
 	malhas_dado_atual.clear()
-	if nome_da_skin != "padrao":
-		# Se os arquivos .res não existirem, o Godot retorna 'null', mas não quebra o jogo.
-		malhas_dado_atual["d4"] = load("res://skins/dados/" + nome_da_skin + "_malha_d4.res")
-		malhas_dado_atual["d6"] = load("res://skins/dados/" + nome_da_skin + "_malha_d6.res")
-		malhas_dado_atual["d8"] = load("res://skins/dados/" + nome_da_skin + "_malha_d8.res")
-		malhas_dado_atual["d10"] = load("res://skins/dados/" + nome_da_skin + "_malha_d10.res")
-		malhas_dado_atual["d12"] = load("res://skins/dados/" + nome_da_skin + "_malha_d12.res")
-		malhas_dado_atual["d20"] = load("res://skins/dados/" + nome_da_skin + "_malha_d20.res")
+	materiais_dado_atual.clear()
 	
-	# Aplica nos dados que já estão na mesa
-	if mat_dado or not malhas_dado_atual.is_empty():
-		material_dado_atual = mat_dado
-		for d_inst in dados_instanciados:
-			if is_instance_valid(d_inst):
-				var tipo_dado = d_inst.get_meta("tipo_dado") if d_inst.has_meta("tipo_dado") else ""
-				var malha_nova = malhas_dado_atual.get(tipo_dado, null)
-				_aplicar_visual_seguro(d_inst, mat_dado, malha_nova)
+	var tipos_de_dados = ["d4", "d6", "d8", "d10", "d12", "d20"]
+	
+# ==========================================
+	# CARREGA OS ARQUIVOS INDIVIDUAIS DE CADA DADO
+	# ==========================================
+	for tipo in tipos_de_dados:
+		# 1. Carrega o Material (As cores/texturas)
+		var caminho_mat = "res://skins/" + nome_da_skin + "/dados/" + nome_da_skin +  "_mat_" + tipo + ".tres"
+		if ResourceLoader.exists(caminho_mat):
+			materiais_dado_atual[tipo] = load(caminho_mat)
+			
+		# 2. Carrega a Malha (O Formato 3D) - AGORA VALE PARA A PADRÃO TAMBÉM!
+		var caminho_mesh = "res://skins/" + nome_da_skin + "/dados/" + nome_da_skin + "_mesh_" + tipo + ".res"
+		if ResourceLoader.exists(caminho_mesh):
+			malhas_dado_atual[tipo] = load(caminho_mesh)
+
+# ==========================================
+	# APLICA NOS DADOS QUE JÁ ESTÃO NA MESA
+	# ==========================================
+	for d_inst in dados_instanciados:
+		if is_instance_valid(d_inst):
+			var tipo_dado = d_inst.get_meta("tipo_dado") if d_inst.has_meta("tipo_dado") else ""
+			var mat_novo = materiais_dado_atual.get(tipo_dado, null)
+			var malha_nova = malhas_dado_atual.get(tipo_dado, null)
+			
+			# Garante que a dezena permaneça escura se a skin for trocada no meio do jogo
+			if d_inst.has_meta("funcao") and d_inst.get_meta("funcao") == "dezena":
+				if mat_novo != null:
+					mat_novo = mat_novo.duplicate()
+					if mat_novo is StandardMaterial3D:
+						mat_novo.albedo_color = mat_novo.albedo_color.darkened(0.5)
+			
+			_aplicar_visual_seguro(d_inst, mat_novo, malha_nova)
 				
-	# Aplica no cenário
+	# ==========================================
+	# CARREGA E APLICA O CENÁRIO
+	# ==========================================
+	var mat_mesa = load("res://skins/" + nome_da_skin + "/cenarios/" + nome_da_skin + "_mesa.tres")
+	var mat_parede = load("res://skins/" + nome_da_skin + "/cenarios/" + nome_da_skin + "_parede.tres")
+	
 	if mat_mesa: _aplicar_visual_seguro(visual_mesa, mat_mesa)
 	if mat_parede:
 		_aplicar_visual_seguro(parede_norte, mat_parede)

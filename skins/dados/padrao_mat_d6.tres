@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bxg52xrbyblr2"]
+
+[ext_resource type="Texture2D" uid="uid://yyf35f6oalla" path="res://d6_mascara_d6.png" id="1_aid1c"]
+
+[resource]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("1_aid1c")
+roughness = 0.4
+metadata/_gltf_primary_texture_coord = 0

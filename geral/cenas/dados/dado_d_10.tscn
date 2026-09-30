@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://cw7chlbee7aye"]
+
+[ext_resource type="Script" uid="uid://vnv55rmqgo21" path="res://dado_fisica.gd" id="1_to4nc"]
+[ext_resource type="ArrayMesh" uid="uid://dkhsaoecmhsei" path="res://skins/cenarios/padrao_mat_d10.res" id="2_n6qbx"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vq4cq"]
+bounce = 0.5
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fms26"]
+points = PackedVector3Array(-0.00018620491, 0.066794395, 1, -0.00018620491, 1.0530444, -0.00019574165, -0.58780056, -0.06700075, 0.8089272, -0.00018620491, -1.0530447, -0.00019574165, 0.5876144, -0.06700075, 0.8089272, 0.9510565, 0.066794395, 0.30892718, 0.9510565, -0.06700075, -0.30912292, 0.5876144, 0.066794395, -0.8091229, -0.00018620491, -0.06700075, -1, -0.58780056, 0.066794395, -0.8091229, -0.9510565, -0.06700075, -0.30912292, -0.9510565, 0.066794395, 0.30892718)
+
+[node name="Dado_D10" type="RigidBody3D" unique_id=567685505]
+mass = 3.0
+physics_material_override = SubResource("PhysicsMaterial_vq4cq")
+continuous_cd = true
+contact_monitor = true
+max_contacts_reported = 3
+script = ExtResource("1_to4nc")
+
+[node name="VisualDado" type="MeshInstance3D" parent="." unique_id=43619773]
+mesh = ExtResource("2_n6qbx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=393658672]
+shape = SubResource("ConvexPolygonShape3D_fms26")
+
+[node name="Faces" type="Node3D" parent="." unique_id=43230433]
+
+[node name="1" type="Marker3D" parent="Faces" unique_id=1251524390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.62247455, 0.2800092, -0.20225422)
+
+[node name="2" type="Marker3D" parent="Faces" unique_id=2041562494]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38471043, -0.2800034, -0.52950853)
+
+[node name="3" type="Marker3D" parent="Faces" unique_id=1646283078]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2800092, -0.6545085)
+
+[node name="4" type="Marker3D" parent="Faces" unique_id=1613228333]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38471043, -0.2800034, -0.5295085)
+
+[node name="5" type="Marker3D" parent="Faces" unique_id=1048782972]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.62247455, 0.2800092, -0.20225424)
+
+[node name="6" type="Marker3D" parent="Faces" unique_id=854324454]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.62247455, -0.2800034, 0.20225427)
+
+[node name="7" type="Marker3D" parent="Faces" unique_id=1994324441]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3847105, 0.2800092, 0.5295085)
+
+[node name="8" type="Marker3D" parent="Faces" unique_id=1304223069]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2800034, 0.6545085)
+
+[node name="9" type="Marker3D" parent="Faces" unique_id=490290478]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3847104, 0.2800092, 0.52950853)
+
+[node name="10" type="Marker3D" parent="Faces" unique_id=1475895482]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.62247455, -0.28000337, 0.20225424)
+
+[node name="SomImpacto" type="AudioStreamPlayer3D" parent="." unique_id=211347967]
+bus = &"Efeitos"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

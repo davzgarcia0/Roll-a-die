@@ -1,46 +1,49 @@
 [gd_scene format=3 uid="uid://bdijti4xxymli"]
 
-[ext_resource type="Script" uid="uid://dmicksmrwpet4" path="res://mesa_jogo.gd" id="1_0np0b"]
-[ext_resource type="Material" uid="uid://b2gaeueocl3b5" path="res://skins/cenarios/padrao_parede.tres" id="2_a5paj"]
-[ext_resource type="Texture2D" uid="uid://c5u056h5v1asn" path="res://skins/cenarios/NicolasCage.jpg" id="3_ute3h"]
-[ext_resource type="Material" uid="uid://6lsbe4idjfn4" path="res://skins/cenarios/espacial_parede.tres" id="4_1u7ec"]
-[ext_resource type="FontFile" uid="uid://dqjcsclemxvyj" path="res://Fonts/One Slice.otf" id="4_744bc"]
-[ext_resource type="Texture2D" uid="uid://de0q74hfginak" path="res://assets2D/btnplain/Retornar.png" id="4_lxpyo"]
-[ext_resource type="Texture2D" uid="uid://c7n7bclfqd4hm" path="res://assets2D/btnplain/recalibrar.png" id="5_1u7ec"]
-[ext_resource type="Texture2D" uid="uid://bvgl8240rkj1k" path="res://assets2D/btn/btn.png" id="5_lxpyo"]
-[ext_resource type="Texture2D" uid="uid://3lixajrw5jjr" path="res://assets2D/btn/btnpressed.png" id="6_1u7ec"]
-[ext_resource type="Texture2D" uid="uid://cvm8dg23ua3a4" path="res://assets2D/btnplain/d4plain.png" id="6_62bnv"]
-[ext_resource type="Texture2D" uid="uid://7avub4pysnhb" path="res://assets2D/btnplain/d4plainpressed.png" id="7_jfnml"]
-[ext_resource type="Texture2D" uid="uid://ct4ymqy1pvwc5" path="res://assets2D/btnplain/d6plain.png" id="8_sixb3"]
-[ext_resource type="Texture2D" uid="uid://1n4urn3aaxlj" path="res://assets2D/btnplain/d6plainpressed.png" id="9_oq1fr"]
-[ext_resource type="Texture2D" uid="uid://dj5f1sdj3amml" path="res://assets2D/btnplain/d8plain.png" id="10_gl6d2"]
-[ext_resource type="Texture2D" uid="uid://c7fyil2rv2jse" path="res://assets2D/btnplain/d8plainpressed.png" id="11_xnq0x"]
-[ext_resource type="Texture2D" uid="uid://5oso3n25iu7v" path="res://assets2D/btnplain/d10plain.png" id="12_4uh1e"]
-[ext_resource type="Texture2D" uid="uid://8ha4p7qgsc8k" path="res://assets2D/btnplain/d10plainpressed.png" id="13_ns2x7"]
-[ext_resource type="Texture2D" uid="uid://cc2gav6cm02n5" path="res://assets2D/btnplain/d12plain.png" id="14_u8xbg"]
-[ext_resource type="Texture2D" uid="uid://bkvb5ku0utq6p" path="res://assets2D/btnplain/d12plainpressed.png" id="15_ocy1s"]
-[ext_resource type="Texture2D" uid="uid://df31bck2v5bng" path="res://assets2D/btnplain/d20plain.png" id="16_kr5eq"]
-[ext_resource type="Texture2D" uid="uid://wb12nakt7dxx" path="res://assets2D/btnplain/d20plainpressed.png" id="17_iwcuy"]
-[ext_resource type="Texture2D" uid="uid://c52f14cqr6dmi" path="res://assets2D/btnplain/d%plain.png" id="18_t0m6q"]
-[ext_resource type="Texture2D" uid="uid://d26yl51p48qy8" path="res://assets2D/btnplain/d%plainpressed.png" id="19_ch5oc"]
-[ext_resource type="Texture2D" uid="uid://6csxjvk2vse0" path="res://assets2D/fundos/fundoCalc.png" id="22_8l5wx"]
-[ext_resource type="FontFile" uid="uid://bb7q1tr31ns6l" path="res://Fonts/dum1.ttf" id="23_v4dk8"]
+[ext_resource type="Script" uid="uid://dmicksmrwpet4" path="res://mesa_jogo.gd" id="1_y3alu"]
+[ext_resource type="Material" uid="uid://dnksybrnknrvc" path="res://skins/padrao/cenario/padrao_mesa.tres" id="2_7uipv"]
+[ext_resource type="Material" uid="uid://b2gaeueocl3b5" path="res://skins/padrao/cenario/padrao_parede.tres" id="3_3fq06"]
+[ext_resource type="Texture2D" uid="uid://c5u056h5v1asn" path="res://skins/padrao/cenario/NicolasCage.jpg" id="4_amem6"]
+[ext_resource type="Material" uid="uid://6lsbe4idjfn4" path="res://skins/espacial/cenario/espacial_parede.tres" id="5_m1bwv"]
+[ext_resource type="Texture2D" uid="uid://de0q74hfginak" path="res://assets2D/btnplain/Retornar.png" id="6_n62fq"]
+[ext_resource type="Texture2D" uid="uid://byxj1yucgx6qf" path="res://assets2D/btnplain/recalibrar.png" id="7_7dykm"]
+[ext_resource type="Texture2D" uid="uid://b73udnye3ydwo" path="res://assets2D/btnplain/d4plain.png" id="8_n0lc1"]
+[ext_resource type="Texture2D" uid="uid://7avub4pysnhb" path="res://assets2D/btnplain/d4plainpressed.png" id="9_4y5p1"]
+[ext_resource type="Texture2D" uid="uid://ct4ymqy1pvwc5" path="res://assets2D/btnplain/d6plain.png" id="10_s7i0s"]
+[ext_resource type="Texture2D" uid="uid://1n4urn3aaxlj" path="res://assets2D/btnplain/d6plainpressed.png" id="11_1lwql"]
+[ext_resource type="Texture2D" uid="uid://dj5f1sdj3amml" path="res://assets2D/btnplain/d8plain.png" id="12_xk1ts"]
+[ext_resource type="Texture2D" uid="uid://c7fyil2rv2jse" path="res://assets2D/btnplain/d8plainpressed.png" id="13_e0s1g"]
+[ext_resource type="Texture2D" uid="uid://5oso3n25iu7v" path="res://assets2D/btnplain/d10plain.png" id="14_ndvl3"]
+[ext_resource type="Texture2D" uid="uid://8ha4p7qgsc8k" path="res://assets2D/btnplain/d10plainpressed.png" id="15_35y5d"]
+[ext_resource type="Texture2D" uid="uid://cc2gav6cm02n5" path="res://assets2D/btnplain/d12plain.png" id="16_xjscg"]
+[ext_resource type="Texture2D" uid="uid://bkvb5ku0utq6p" path="res://assets2D/btnplain/d12plainpressed.png" id="17_blcew"]
+[ext_resource type="Texture2D" uid="uid://df31bck2v5bng" path="res://assets2D/btnplain/d20plain.png" id="18_2fobn"]
+[ext_resource type="Texture2D" uid="uid://wb12nakt7dxx" path="res://assets2D/btnplain/d20plainpressed.png" id="19_wrnwg"]
+[ext_resource type="Texture2D" uid="uid://c52f14cqr6dmi" path="res://assets2D/btnplain/d%plain.png" id="20_tt6aj"]
+[ext_resource type="Texture2D" uid="uid://d26yl51p48qy8" path="res://assets2D/btnplain/d%plainpressed.png" id="21_rkktc"]
+[ext_resource type="FontFile" uid="uid://dqjcsclemxvyj" path="res://Fonts/One Slice.otf" id="22_q015x"]
+[ext_resource type="Texture2D" uid="uid://bvgl8240rkj1k" path="res://assets2D/btn/btn.png" id="23_w21e3"]
+[ext_resource type="Texture2D" uid="uid://3lixajrw5jjr" path="res://assets2D/btn/btnpressed.png" id="24_1po0j"]
+[ext_resource type="Texture2D" uid="uid://6csxjvk2vse0" path="res://assets2D/fundos/fundoCalc.png" id="25_83w22"]
+[ext_resource type="FontFile" uid="uid://bb7q1tr31ns6l" path="res://Fonts/dum1.ttf" id="26_pofh7"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_plaxu"]
+lightmap_size_hint = Vector2i(204, 116)
+material = ExtResource("2_7uipv")
 size = Vector3(20, 1, 20)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vq4cq"]
 size = Vector3(20, 1, 20)
 
 [sub_resource type="BoxMesh" id="BoxMesh_a5paj"]
-material = ExtResource("2_a5paj")
+material = ExtResource("3_3fq06")
 size = Vector3(20, 10, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0evby"]
 size = Vector3(20, 10, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6m6gd"]
-albedo_texture = ExtResource("3_ute3h")
+albedo_texture = ExtResource("4_amem6")
 uv1_scale = Vector3(2.3, 2.3, 2.3)
 uv1_offset = Vector3(0.5, 0, 0)
 
@@ -76,7 +79,7 @@ content_margin_left = 30.0
 content_margin_top = 15.0
 content_margin_right = 30.0
 content_margin_bottom = 15.0
-texture = ExtResource("5_lxpyo")
+texture = ExtResource("23_w21e3")
 region_rect = Rect2(0, 0, 336, 296)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n7vb8"]
@@ -84,14 +87,14 @@ content_margin_left = 30.0
 content_margin_top = 15.0
 content_margin_right = 30.0
 content_margin_bottom = 15.0
-texture = ExtResource("6_1u7ec")
+texture = ExtResource("24_1po0j")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ctcn6"]
 content_margin_left = 30.0
 content_margin_top = 15.0
 content_margin_right = 30.0
 content_margin_bottom = 15.0
-texture = ExtResource("5_lxpyo")
+texture = ExtResource("23_w21e3")
 region_rect = Rect2(0, 0, 336, 296)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y7sp2"]
@@ -99,14 +102,14 @@ content_margin_left = 30.0
 content_margin_top = 15.0
 content_margin_right = 30.0
 content_margin_bottom = 15.0
-texture = ExtResource("6_1u7ec")
+texture = ExtResource("24_1po0j")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_744bc"]
 content_margin_left = 50.0
 content_margin_top = 15.0
 content_margin_right = 50.0
 content_margin_bottom = 15.0
-texture = ExtResource("5_lxpyo")
+texture = ExtResource("23_w21e3")
 region_rect = Rect2(0, 0, 336, 296)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lxpyo"]
@@ -114,7 +117,7 @@ content_margin_left = 30.0
 content_margin_top = 15.0
 content_margin_right = 30.0
 content_margin_bottom = 15.0
-texture = ExtResource("5_lxpyo")
+texture = ExtResource("23_w21e3")
 region_rect = Rect2(0, 0, 336, 296)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1u7ec"]
@@ -122,21 +125,21 @@ content_margin_left = 30.0
 content_margin_top = 15.0
 content_margin_right = 30.0
 content_margin_bottom = 15.0
-texture = ExtResource("6_1u7ec")
+texture = ExtResource("24_1po0j")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_62bnv"]
 content_margin_left = 30.0
 content_margin_top = 15.0
 content_margin_right = 30.0
 content_margin_bottom = 15.0
-texture = ExtResource("6_1u7ec")
+texture = ExtResource("24_1po0j")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jfnml"]
 content_margin_left = 30.0
 content_margin_top = 15.0
 content_margin_right = 30.0
 content_margin_bottom = 15.0
-texture = ExtResource("5_lxpyo")
+texture = ExtResource("23_w21e3")
 region_rect = Rect2(0, 0, 336, 296)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sixb3"]
@@ -144,7 +147,7 @@ content_margin_left = 30.0
 content_margin_top = 15.0
 content_margin_right = 30.0
 content_margin_bottom = 15.0
-texture = ExtResource("5_lxpyo")
+texture = ExtResource("23_w21e3")
 region_rect = Rect2(0, 0, 336, 296)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oq1fr"]
@@ -152,21 +155,21 @@ content_margin_left = 30.0
 content_margin_top = 15.0
 content_margin_right = 30.0
 content_margin_bottom = 15.0
-texture = ExtResource("6_1u7ec")
+texture = ExtResource("24_1po0j")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gl6d2"]
 content_margin_left = 30.0
 content_margin_top = 15.0
 content_margin_right = 30.0
 content_margin_bottom = 15.0
-texture = ExtResource("6_1u7ec")
+texture = ExtResource("24_1po0j")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tn651"]
 content_margin_left = 30.0
 content_margin_top = 15.0
 content_margin_right = 30.0
 content_margin_bottom = 15.0
-texture = ExtResource("22_8l5wx")
+texture = ExtResource("25_83w22")
 
 [sub_resource type="LabelSettings" id="LabelSettings_vq4cq"]
 font_size = 80
@@ -175,14 +178,13 @@ shadow_size = 5
 shadow_color = Color(0, 0, 0, 1)
 
 [node name="Mesa_Jogo" type="Node3D" unique_id=2121977375]
-script = ExtResource("1_0np0b")
+script = ExtResource("1_y3alu")
 
 [node name="Sala_RPG" type="StaticBody3D" parent="." unique_id=496986434]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 
 [node name="VisualMesa" type="MeshInstance3D" parent="Sala_RPG" unique_id=1364335074]
 mesh = SubResource("BoxMesh_plaxu")
-surface_material_override/0 = ExtResource("2_a5paj")
 
 [node name="CollisionShape3D6" type="CollisionShape3D" parent="Sala_RPG" unique_id=452375978]
 shape = SubResource("BoxShape3D_vq4cq")
@@ -211,7 +213,7 @@ shape = SubResource("BoxShape3D_0np0b")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 5, 0)
 cast_shadow = 0
 mesh = SubResource("BoxMesh_ute3h")
-surface_material_override/0 = ExtResource("2_a5paj")
+surface_material_override/0 = ExtResource("3_3fq06")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="Sala_RPG" unique_id=1200425025]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 5, 0)
@@ -221,7 +223,7 @@ shape = SubResource("BoxShape3D_6m6gd")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 5, 0)
 cast_shadow = 0
 mesh = SubResource("BoxMesh_w7hyk")
-surface_material_override/0 = ExtResource("4_1u7ec")
+surface_material_override/0 = ExtResource("5_m1bwv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sala_RPG" unique_id=1279365216]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 5, 0)
@@ -231,7 +233,7 @@ shape = SubResource("BoxShape3D_5cxtu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008589268, 10.008272, -0.002462864)
 cast_shadow = 0
 mesh = SubResource("BoxMesh_nj788")
-surface_material_override/0 = ExtResource("2_a5paj")
+surface_material_override/0 = ExtResource("3_3fq06")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Sala_RPG" unique_id=1323445921]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
@@ -299,7 +301,7 @@ anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_vertical = 0
-texture = ExtResource("4_lxpyo")
+texture = ExtResource("6_n62fq")
 expand_mode = 1
 stretch_mode = 5
 
@@ -321,7 +323,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 0
 grow_vertical = 0
-texture = ExtResource("5_1u7ec")
+texture = ExtResource("7_7dykm")
 expand_mode = 1
 stretch_mode = 5
 
@@ -365,18 +367,18 @@ theme_override_constants/separation = 8
 custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
 offset_transform_enabled = true
-texture_normal = ExtResource("6_62bnv")
-texture_pressed = ExtResource("7_jfnml")
-texture_hover = ExtResource("6_62bnv")
+texture_normal = ExtResource("8_n0lc1")
+texture_pressed = ExtResource("9_4y5p1")
+texture_hover = ExtResource("8_n0lc1")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="D6" type="TextureButton" parent="CanvasLayer/UI_Paisagem/MarginContainer/VBoxContainer2/HBoxContainer" unique_id=278691215]
 custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
-texture_normal = ExtResource("8_sixb3")
-texture_pressed = ExtResource("9_oq1fr")
-texture_hover = ExtResource("8_sixb3")
+texture_normal = ExtResource("10_s7i0s")
+texture_pressed = ExtResource("11_1lwql")
+texture_hover = ExtResource("10_s7i0s")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -387,18 +389,18 @@ theme_override_constants/separation = 8
 [node name="D8" type="TextureButton" parent="CanvasLayer/UI_Paisagem/MarginContainer/VBoxContainer2/HBoxContainer2" unique_id=1752507860]
 custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
-texture_normal = ExtResource("10_gl6d2")
-texture_pressed = ExtResource("11_xnq0x")
-texture_hover = ExtResource("10_gl6d2")
+texture_normal = ExtResource("12_xk1ts")
+texture_pressed = ExtResource("13_e0s1g")
+texture_hover = ExtResource("12_xk1ts")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="D10" type="TextureButton" parent="CanvasLayer/UI_Paisagem/MarginContainer/VBoxContainer2/HBoxContainer2" unique_id=784037336]
 custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
-texture_normal = ExtResource("12_4uh1e")
-texture_pressed = ExtResource("13_ns2x7")
-texture_hover = ExtResource("12_4uh1e")
+texture_normal = ExtResource("14_ndvl3")
+texture_pressed = ExtResource("15_35y5d")
+texture_hover = ExtResource("14_ndvl3")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -408,27 +410,27 @@ layout_mode = 2
 [node name="D12" type="TextureButton" parent="CanvasLayer/UI_Paisagem/MarginContainer/VBoxContainer2/HBoxContainer3" unique_id=1506067501]
 custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
-texture_normal = ExtResource("14_u8xbg")
-texture_pressed = ExtResource("15_ocy1s")
-texture_hover = ExtResource("14_u8xbg")
+texture_normal = ExtResource("16_xjscg")
+texture_pressed = ExtResource("17_blcew")
+texture_hover = ExtResource("16_xjscg")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="D20" type="TextureButton" parent="CanvasLayer/UI_Paisagem/MarginContainer/VBoxContainer2/HBoxContainer3" unique_id=945324476]
 custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
-texture_normal = ExtResource("16_kr5eq")
-texture_pressed = ExtResource("17_iwcuy")
-texture_hover = ExtResource("16_kr5eq")
+texture_normal = ExtResource("18_2fobn")
+texture_pressed = ExtResource("19_wrnwg")
+texture_hover = ExtResource("18_2fobn")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Dpercent" type="TextureButton" parent="CanvasLayer/UI_Paisagem/MarginContainer/VBoxContainer2" unique_id=1356934003]
 custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
-texture_normal = ExtResource("18_t0m6q")
-texture_pressed = ExtResource("19_ch5oc")
-texture_hover = ExtResource("18_t0m6q")
+texture_normal = ExtResource("20_tt6aj")
+texture_pressed = ExtResource("21_rkktc")
+texture_hover = ExtResource("20_tt6aj")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -458,7 +460,7 @@ alignment = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_744bc")
+theme_override_fonts/font = ExtResource("22_q015x")
 theme_override_font_sizes/font_size = 150
 theme_override_styles/normal = SubResource("StyleBoxTexture_oel44")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_oel44")
@@ -475,7 +477,7 @@ icon_alignment = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_744bc")
+theme_override_fonts/font = ExtResource("22_q015x")
 theme_override_font_sizes/font_size = 150
 theme_override_styles/normal = SubResource("StyleBoxTexture_ctcn6")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_ctcn6")
@@ -493,7 +495,7 @@ layout_mode = 2
 size_flags_vertical = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_744bc")
+theme_override_fonts/font = ExtResource("22_q015x")
 theme_override_font_sizes/font_size = 150
 theme_override_styles/normal = SubResource("StyleBoxTexture_744bc")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_lxpyo")
@@ -535,7 +537,7 @@ custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.89411765)
-theme_override_fonts/font = ExtResource("23_v4dk8")
+theme_override_fonts/font = ExtResource("26_pofh7")
 theme_override_font_sizes/font_size = 100
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -559,7 +561,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("5_1u7ec")
+texture = ExtResource("7_7dykm")
 expand_mode = 1
 stretch_mode = 5
 
@@ -573,7 +575,7 @@ grow_horizontal = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 offset_transform_enabled = true
-theme_override_fonts/font = ExtResource("4_744bc")
+theme_override_fonts/font = ExtResource("22_q015x")
 theme_override_font_sizes/font_size = 30
 text = "Roll a Die"
 label_settings = SubResource("LabelSettings_vq4cq")
@@ -594,8 +596,8 @@ grow_vertical = 0
 layout_mode = 2
 color = Color(0, 0, 0, 0.57254905)
 
-[connection signal="pressed" from="CanvasLayer/UI_Retrato/MarginContainer/BotaoRetorno" to="." method="_on_botao_retorno_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI_Retrato/MarginContainer/BotaoRetorno" to="." method="_on_botao_reset_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI_Retrato/MarginContainer/BotaoRetorno" to="." method="_on_botao_retorno_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI_Retrato/MarginContainer/BotaoRecalibrar" to="." method="_on_botao_recalibrar_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI_Paisagem/MarginContainer/VBoxContainer2/HBoxContainer/D4" to="." method="adicionar_dado" binds= ["d4"]]
 [connection signal="pressed" from="CanvasLayer/UI_Paisagem/MarginContainer/VBoxContainer2/HBoxContainer/D6" to="." method="adicionar_dado" binds= ["d6"]]
