@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://m7r27httmnn0"]
+
+[ext_resource type="Texture2D" uid="uid://bhnl5kgj0lcg7" path="res://skins/espacial/cenario/Grumpy Cat Star Wars (1).png" id="1_q4k5o"]
+
+[resource]
+cull_mode = 2
+albedo_texture = ExtResource("1_q4k5o")
+uv1_scale = Vector3(2.9, 2.1, 0)

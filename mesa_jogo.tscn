@@ -1,14 +1,18 @@
 [gd_scene format=3 uid="uid://bdijti4xxymli"]
 
 [ext_resource type="Script" uid="uid://dmicksmrwpet4" path="res://mesa_jogo.gd" id="1_y3alu"]
-[ext_resource type="Material" uid="uid://dnksybrnknrvc" path="res://skins/padrao/cenario/padrao_mesa.tres" id="2_7uipv"]
-[ext_resource type="Material" uid="uid://b2gaeueocl3b5" path="res://skins/padrao/cenario/padrao_parede.tres" id="3_3fq06"]
-[ext_resource type="Texture2D" uid="uid://c5u056h5v1asn" path="res://skins/padrao/cenario/NicolasCage.jpg" id="4_amem6"]
-[ext_resource type="Material" uid="uid://6lsbe4idjfn4" path="res://skins/espacial/cenario/espacial_parede.tres" id="5_m1bwv"]
+[ext_resource type="Material" uid="uid://dnksybrnknrvc" path="res://skins/padrao/cenario/padrao_mat_mesa.tres" id="2_7uipv"]
+[ext_resource type="Material" uid="uid://b2gaeueocl3b5" path="res://skins/padrao/cenario/padrao_mat_parede_norte.tres" id="3_3fq06"]
+[ext_resource type="Material" uid="uid://dixnm14cmtf01" path="res://skins/espacial/cenario/espacial_mat_parede_sul.tres" id="4_4uh1e"]
+[ext_resource type="Material" uid="uid://bcl00tsoiljek" path="res://skins/padrao/cenario/padrao_mat_parede_sul.tres" id="4_sixb3"]
+[ext_resource type="Material" uid="uid://m7r27httmnn0" path="res://skins/espacial/cenario/espacial_mat_parede_leste.tres" id="5_ns2x7"]
 [ext_resource type="Texture2D" uid="uid://de0q74hfginak" path="res://assets2D/btnplain/Retornar.png" id="6_n62fq"]
 [ext_resource type="Texture2D" uid="uid://byxj1yucgx6qf" path="res://assets2D/btnplain/recalibrar.png" id="7_7dykm"]
+[ext_resource type="Material" uid="uid://jjyt3ijkxw71" path="res://skins/espacial/cenario/espacial_mat_teto.tres" id="7_ocy1s"]
+[ext_resource type="SphereMesh" uid="uid://bnl8eoanxtlb0" path="res://skins/padrao/cenario/padrao_mesh_fundo.res" id="8_gl6d2"]
 [ext_resource type="Texture2D" uid="uid://b73udnye3ydwo" path="res://assets2D/btnplain/d4plain.png" id="8_n0lc1"]
 [ext_resource type="Texture2D" uid="uid://7avub4pysnhb" path="res://assets2D/btnplain/d4plainpressed.png" id="9_4y5p1"]
+[ext_resource type="Material" uid="uid://c2rnwng34m3j6" path="res://skins/espacial/cenario/espacial_mat_fundo.tres" id="9_kr5eq"]
 [ext_resource type="Texture2D" uid="uid://ct4ymqy1pvwc5" path="res://assets2D/btnplain/d6plain.png" id="10_s7i0s"]
 [ext_resource type="Texture2D" uid="uid://1n4urn3aaxlj" path="res://assets2D/btnplain/d6plainpressed.png" id="11_1lwql"]
 [ext_resource type="Texture2D" uid="uid://dj5f1sdj3amml" path="res://assets2D/btnplain/d8plain.png" id="12_xk1ts"]
@@ -29,23 +33,16 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_plaxu"]
 lightmap_size_hint = Vector2i(204, 116)
-material = ExtResource("2_7uipv")
 size = Vector3(20, 1, 20)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vq4cq"]
 size = Vector3(20, 1, 20)
 
 [sub_resource type="BoxMesh" id="BoxMesh_a5paj"]
-material = ExtResource("3_3fq06")
 size = Vector3(20, 10, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0evby"]
 size = Vector3(20, 10, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6m6gd"]
-albedo_texture = ExtResource("4_amem6")
-uv1_scale = Vector3(2.3, 2.3, 2.3)
-uv1_offset = Vector3(0.5, 0, 0)
 
 [sub_resource type="BoxMesh" id="BoxMesh_7q8rh"]
 size = Vector3(20, 10, 1)
@@ -185,8 +182,10 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 
 [node name="VisualMesa" type="MeshInstance3D" parent="Sala_RPG" unique_id=1364335074]
 mesh = SubResource("BoxMesh_plaxu")
+surface_material_override/0 = ExtResource("2_7uipv")
 
 [node name="CollisionShape3D6" type="CollisionShape3D" parent="Sala_RPG" unique_id=452375978]
+visible = false
 shape = SubResource("BoxShape3D_vq4cq")
 debug_color = Color(0.7176471, 0.47058824, 0.2784314, 0.5019608)
 
@@ -194,50 +193,60 @@ debug_color = Color(0.7176471, 0.47058824, 0.2784314, 0.5019608)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -10)
 cast_shadow = 0
 mesh = SubResource("BoxMesh_a5paj")
+surface_material_override/0 = ExtResource("3_3fq06")
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="Sala_RPG" unique_id=1027974801]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -10)
+visible = false
 shape = SubResource("BoxShape3D_0evby")
 
 [node name="VisualParedeSul" type="MeshInstance3D" parent="Sala_RPG" unique_id=561527177]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 10)
-material_override = SubResource("StandardMaterial3D_6m6gd")
 cast_shadow = 0
 mesh = SubResource("BoxMesh_7q8rh")
+surface_material_override/0 = ExtResource("4_4uh1e")
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="Sala_RPG" unique_id=342595001]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 10)
+visible = false
 shape = SubResource("BoxShape3D_0np0b")
 
 [node name="VisualParedeLeste" type="MeshInstance3D" parent="Sala_RPG" unique_id=1406651746]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 5, 0)
 cast_shadow = 0
 mesh = SubResource("BoxMesh_ute3h")
-surface_material_override/0 = ExtResource("3_3fq06")
+surface_material_override/0 = ExtResource("5_ns2x7")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="Sala_RPG" unique_id=1200425025]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 5, 0)
+visible = false
 shape = SubResource("BoxShape3D_6m6gd")
 
 [node name="VisualParedeOeste" type="MeshInstance3D" parent="Sala_RPG" unique_id=1460898635]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 5, 0)
 cast_shadow = 0
 mesh = SubResource("BoxMesh_w7hyk")
-surface_material_override/0 = ExtResource("5_m1bwv")
+surface_material_override/0 = ExtResource("4_sixb3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sala_RPG" unique_id=1279365216]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 5, 0)
+visible = false
 shape = SubResource("BoxShape3D_5cxtu")
 
 [node name="VisualTeto" type="MeshInstance3D" parent="Sala_RPG" unique_id=1145918977]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008589268, 10.008272, -0.002462864)
 cast_shadow = 0
 mesh = SubResource("BoxMesh_nj788")
-surface_material_override/0 = ExtResource("3_3fq06")
+surface_material_override/0 = ExtResource("7_ocy1s")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Sala_RPG" unique_id=1323445921]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
+visible = false
 shape = SubResource("BoxShape3D_ti6qr")
+
+[node name="VisualFundo" type="MeshInstance3D" parent="Sala_RPG" unique_id=870411614]
+mesh = ExtResource("8_gl6d2")
+surface_material_override/0 = ExtResource("9_kr5eq")
 
 [node name="PlayerCamera" type="CharacterBody3D" parent="." unique_id=1313215960]
 transform = Transform3D(0.6888241, 0, 0.7249285, 0, 1, 0, -0.7249285, 0, 0.6888241, 6, 8, 6)
@@ -248,10 +257,12 @@ shape = SubResource("SphereShape3D_vq4cq")
 [node name="SuporteRotacao" type="Node3D" parent="PlayerCamera" unique_id=120385646]
 
 [node name="Camera3D" type="Camera3D" parent="PlayerCamera" unique_id=564813590]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 9.536743e-07, 0, 3)
+keep_aspect = 0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1168837689]
-transform = Transform3D(0.9832091, -0.12903482, 0.12903477, 4.3406825e-09, 0.70710677, 0.7071068, -0.18248273, -0.6952338, 0.6952338, -2.5385268, 7.8389034, -0.78295994)
-light_angular_distance = 40.0
+transform = Transform3D(0.70710677, -0.49999997, 0.49999997, 0, 0.70710677, 0.70710677, -0.70710677, -0.49999997, 0.49999997, 10, 10, 10)
+light_energy = 2.0
 shadow_enabled = true
 shadow_blur = 10.0
 directional_shadow_split_2 = 0.4

@@ -46,6 +46,10 @@
 [ext_resource type="Texture2D" uid="uid://c4dnufv0lirmt" path="res://assets2D/btn/check.png" id="44_ofv36"]
 [ext_resource type="Texture2D" uid="uid://clojtgs87sdes" path="res://assets2D/btn/uncheck.png" id="45_0enk4"]
 [ext_resource type="Texture2D" uid="uid://b7ylm7m4sn2fk" path="res://Icons/icon.svg" id="46_68lsc"]
+[ext_resource type="Texture2D" uid="uid://l6g26x4wyy4d" path="res://skins/padrao/previas/btn_padrao.png" id="46_mucpb"]
+[ext_resource type="Texture2D" uid="uid://bbaol0d850j0" path="res://skins/padrao/previas/btn_padrao_pressed.png" id="47_3f082"]
+[ext_resource type="Texture2D" uid="uid://cbn063hn841ou" path="res://skins/espacial/previas/btn_espacial.png" id="48_8w2bw"]
+[ext_resource type="Texture2D" uid="uid://bnjriphq40fbp" path="res://skins/espacial/previas/btn_espacial_pressed.png" id="49_8hdf0"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4ton2"]
 texture = ExtResource("2_248as")
@@ -341,13 +345,33 @@ modulate_color = Color(1, 1, 1, 0.3529412)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_44oc5"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s20ck"]
+texture = ExtResource("46_mucpb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qer0m"]
+texture = ExtResource("47_3f082")
+expand_margin_left = 30.0
+expand_margin_top = 30.0
+expand_margin_right = 30.0
+expand_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gpmlq"]
+texture = ExtResource("48_8w2bw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2tcpk"]
+texture = ExtResource("49_8hdf0")
+expand_margin_left = 30.0
+expand_margin_top = 30.0
+expand_margin_right = 30.0
+expand_margin_bottom = 30.0
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vq4cq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_plaxu"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_snpak"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ctsbx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_snpak"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_egb3i"]
 texture = ExtResource("40_4ga7k")
@@ -1183,7 +1207,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = SubResource("FontVariation_vq4cq")
 theme_override_font_sizes/font_size = 25
-text = "Versão 0.0.0.4 39/09/2026:
+text = "Versão 0.0.0.5 01/10/2026:
+- Adcionado skins espacial
+- Criado botão de skins (padrão e espacial)
+
+Versão 0.0.0.4 30/09/2026:
 - Identação de arquivos internos
 - implementação de skins padrão
 
@@ -1306,18 +1334,32 @@ size_flags_vertical = 0
 alignment = 1
 
 [node name="skinPadrao" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsAdquiridas/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1024603894]
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_s20ck")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_s20ck")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qer0m")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_qer0m")
+theme_override_styles/hover = SubResource("StyleBoxTexture_s20ck")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_s20ck")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_qer0m")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_qer0m")
 toggle_mode = true
-icon = ExtResource("46_68lsc")
-flat = true
 icon_alignment = 1
 vertical_icon_alignment = 0
 
 [node name="skinEspacial" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsAdquiridas/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=194922753]
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_gpmlq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_gpmlq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2tcpk")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_2tcpk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gpmlq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_gpmlq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_2tcpk")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_2tcpk")
 toggle_mode = true
-icon = ExtResource("46_68lsc")
-flat = true
 icon_alignment = 1
 vertical_icon_alignment = 0
 
@@ -1411,82 +1453,55 @@ theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer" unique_id=930162317]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer" unique_id=1785591411]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer" unique_id=2019734305]
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer" unique_id=384546122]
 layout_mode = 2
+size_flags_horizontal = 0
 size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ctsbx")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer" unique_id=157632878]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=388832540]
+layout_mode = 2
 alignment = 1
 
-[node name="Button" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2044424307]
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1950223221]
 layout_mode = 2
-disabled = true
-toggle_mode = true
+size_flags_horizontal = 3
+vertical_scroll_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ScrollContainer" unique_id=802192346]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ScrollContainer/HBoxContainer" unique_id=1870512105]
+layout_mode = 2
 icon = ExtResource("46_68lsc")
 flat = true
-icon_alignment = 1
 
-[node name="Button2" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=598844878]
+[node name="Button2" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ScrollContainer/HBoxContainer" unique_id=1137983805]
 layout_mode = 2
-disabled = true
-toggle_mode = true
 icon = ExtResource("46_68lsc")
 flat = true
-icon_alignment = 1
 
-[node name="Button3" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=809227480]
+[node name="Button3" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ScrollContainer/HBoxContainer" unique_id=1452646636]
 layout_mode = 2
-disabled = true
-toggle_mode = true
 icon = ExtResource("46_68lsc")
 flat = true
-icon_alignment = 1
 
-[node name="Button4" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2047976704]
+[node name="Button4" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ScrollContainer/HBoxContainer" unique_id=1985306322]
 layout_mode = 2
-disabled = true
-toggle_mode = true
 icon = ExtResource("46_68lsc")
 flat = true
-icon_alignment = 1
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer" unique_id=985304914]
+[node name="Button5" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ScrollContainer/HBoxContainer" unique_id=1535980321]
 layout_mode = 2
-size_flags_vertical = 0
-alignment = 1
-
-[node name="Button" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=860849106]
-layout_mode = 2
-disabled = true
-toggle_mode = true
 icon = ExtResource("46_68lsc")
 flat = true
-icon_alignment = 1
-
-[node name="Button2" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=491398095]
-layout_mode = 2
-disabled = true
-toggle_mode = true
-icon = ExtResource("46_68lsc")
-flat = true
-icon_alignment = 1
-
-[node name="Button3" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1042443987]
-layout_mode = 2
-disabled = true
-toggle_mode = true
-icon = ExtResource("46_68lsc")
-flat = true
-icon_alignment = 1
-
-[node name="Button4" type="Button" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SkinsDisponiveis/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=719492715]
-layout_mode = 2
-disabled = true
-toggle_mode = true
-icon = ExtResource("46_68lsc")
-flat = true
-icon_alignment = 1
 
 [node name="Previa" type="PanelContainer" parent="VBoxContainer/MenuPanel/SkinPanel/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=126709223]
 layout_mode = 2

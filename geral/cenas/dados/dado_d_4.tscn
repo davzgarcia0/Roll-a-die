@@ -1,40 +1,10 @@
-[gd_scene format=4 uid="uid://cv41p1tmxrav4"]
+[gd_scene format=3 uid="uid://cv41p1tmxrav4"]
 
 [ext_resource type="Script" uid="uid://vnv55rmqgo21" path="res://dado_fisica.gd" id="1_kk3dj"]
+[ext_resource type="ArrayMesh" uid="uid://cgqqi7mtmvgbu" path="res://skins/espacial/dados/espacial_mesh_d4.res" id="2_k6g0m"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_itntr"]
 bounce = 0.5
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sjwn7"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_k6g0m"]
-_surfaces = [{
-"aabb": AABB(-0.47140452, -0.3333333, -0.8164966, 1.4142135, 1.3333333, 1.6329932),
-"format": 34896613377,
-"index_count": 12,
-"index_data": PackedByteArray("AAABAAIAAgABAAMAAAADAAEAAAACAAMA"),
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray("VVX///9/AAAAAAAAAAAAAP//AAD/fwAAAAAAAP//AAA=")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_7h1rt"]
-resource_name = "d4_Solid"
-_surfaces = [{
-"aabb": AABB(-0.47140452, -0.3333333, -0.8164966, 1.4142135, 1.3333333, 1.6329932),
-"format": 34896613383,
-"index_count": 12,
-"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsA"),
-"material": SubResource("StandardMaterial3D_sjwn7"),
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("VVX///9//OgAAAAAAAD86P//AAD/f/zoVVX///9/x8QAAAAA///HxAAAAAAAAMfEVVX///9/VeL//wAA/39V4gAAAAD//1Xi//8AAP9///8AAAAAAAD//wAAAAD/////m8g8U5vIPFObyDxTGn+w3hp/sN4af7DeNp4nhzaeJ4c2nieH/3//P/9//z//f/8/")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_k6g0m")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_sikmb"]
 points = PackedVector3Array(0.942809, -0.3333333, 0, -0.47140452, -0.3333333, 0.8164966, -0.47140452, -0.3333333, -0.8164966, -4.6163797e-05, 0.99999994, 0)
@@ -48,7 +18,7 @@ max_contacts_reported = 3
 script = ExtResource("1_kk3dj")
 
 [node name="VisualDado" type="MeshInstance3D" parent="." unique_id=825345543]
-mesh = SubResource("ArrayMesh_7h1rt")
+mesh = ExtResource("2_k6g0m")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1725818240]
 shape = SubResource("ConvexPolygonShape3D_sikmb")

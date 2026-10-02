@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://cw7chlbee7aye"]
 
 [ext_resource type="Script" uid="uid://vnv55rmqgo21" path="res://dado_fisica.gd" id="1_to4nc"]
-[ext_resource type="ArrayMesh" uid="uid://dkhsaoecmhsei" path="res://skins/cenarios/padrao_mat_d10.res" id="2_n6qbx"]
+[ext_resource type="ArrayMesh" uid="uid://cbcqas2cv5soo" path="res://skins/espacial/dados/espacial_mesh_d10.res" id="2_n6qbx"]
+[ext_resource type="Material" uid="uid://btt0eyfk0snf5" path="res://skins/espacial/dados/espacial_mat_d10.tres" id="3_ayaxr"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vq4cq"]
 bounce = 0.5
@@ -19,6 +20,7 @@ script = ExtResource("1_to4nc")
 
 [node name="VisualDado" type="MeshInstance3D" parent="." unique_id=43619773]
 mesh = ExtResource("2_n6qbx")
+surface_material_override/0 = ExtResource("3_ayaxr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=393658672]
 shape = SubResource("ConvexPolygonShape3D_fms26")

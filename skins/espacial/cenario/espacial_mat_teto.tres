@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://jjyt3ijkxw71"]
+
+[ext_resource type="Texture2D" uid="uid://c5u056h5v1asn" path="res://skins/padrao/cenario/NicolasCage.jpg" id="1_r3ac5"]
+
+[resource]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.3
+emission_texture = ExtResource("1_r3ac5")
+backlight_enabled = true
+backlight = Color(0.73300546, 0.7330054, 0.7330054, 1)
+uv1_scale = Vector3(2.1, 2, 2.1)

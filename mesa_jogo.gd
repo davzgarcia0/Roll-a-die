@@ -25,6 +25,7 @@ var malhas_dado_atual: Dictionary = {}    # Guarda as malhas (.res)
 @onready var parede_leste = $Sala_RPG/VisualParedeLeste
 @onready var parede_oeste = $Sala_RPG/VisualParedeOeste
 @onready var teto = $Sala_RPG/VisualTeto
+@onready var fundo = $Sala_RPG/VisualFundo
 
 # ==========================================
 # NOVAS REFERÊNCIAS DA INTERFACE (CANVAS LAYER)
@@ -151,7 +152,6 @@ func atualizar_interface_formula():
 		
 	label_formula_paisagem.text = formula_texto
 
-
 # ==========================================
 # GERENCIAMENTO DE DADOS (SPAWN E FÍSICA)
 # ==========================================
@@ -273,7 +273,7 @@ func _physics_process(delta):
 		
 	pitch += rotacao_suavizada.x * sensibilidade_movimento * delta
 	yaw += rotacao_suavizada.y * sensibilidade_movimento * delta
-	pitch = clamp(pitch, deg_to_rad(-60), deg_to_rad(75))
+	pitch = clamp(pitch, deg_to_rad(-90), deg_to_rad(90))
 	camera_fisica.rotation = Vector3(pitch, yaw, 0)
 	
 	if segurando_dado:
@@ -548,19 +548,40 @@ func aplicar_skin_completa(nome_da_skin: String):
 			
 			_aplicar_visual_seguro(d_inst, mat_novo, malha_nova)
 				
+# ==========================================
+	# CARREGA E APLICA O CENÁRIO E FUNDO
 	# ==========================================
-	# CARREGA E APLICA O CENÁRIO
-	# ==========================================
-	var mat_mesa = load("res://skins/" + nome_da_skin + "/cenarios/" + nome_da_skin + "_mesa.tres")
-	var mat_parede = load("res://skins/" + nome_da_skin + "/cenarios/" + nome_da_skin + "_parede.tres")
+	var caminho_base = "res://skins/" + nome_da_skin + "/cenario/" + nome_da_skin
 	
-	if mat_mesa: _aplicar_visual_seguro(visual_mesa, mat_mesa)
-	if mat_parede:
-		_aplicar_visual_seguro(parede_norte, mat_parede)
-		_aplicar_visual_seguro(parede_sul, mat_parede)
-		_aplicar_visual_seguro(parede_leste, mat_parede)
-		_aplicar_visual_seguro(parede_oeste, mat_parede)
-		_aplicar_visual_seguro(teto, mat_parede)
+	# 1. Tenta carregar os Materiais (.tres)
+	var mat_mesa = load(caminho_base + "_mat_mesa.tres")
+	var mat_parede_norte = load(caminho_base + "_mat_parede_norte.tres")
+	var mat_parede_sul = load(caminho_base + "_mat_parede_sul.tres")
+	var mat_parede_leste = load(caminho_base + "_mat_parede_leste.tres")
+	var mat_parede_oeste = load(caminho_base + "_mat_parede_oeste.tres")
+	var mat_teto = load(caminho_base + "_mat_teto.tres")
+	var mat_fundo = load(caminho_base + "_mat_fundo.tres")
+	
+	# 2. Tenta carregar as Malhas 3D (.res) vindas do Blender
+	var mesh_mesa = load(caminho_base + "_mesh_mesa.res")
+	var mesh_parede_norte = load(caminho_base + "_mesh_parede_norte.res")
+	var mesh_parede_sul = load(caminho_base + "_mesh_parede_sul.res")
+	var mesh_parede_leste = load(caminho_base + "_mesh_parede_leste.res")
+	var mesh_parede_oeste = load(caminho_base + "_mesh_parede_oeste.res")
+	var mesh_teto = load(caminho_base + "_mesh_teto.res")
+	var mesh_fundo = load(caminho_base + "_mesh_fundo.res")
+	
+	# 3. Aplica o combo (Material + Malha) em cada parede e mesa
+	_aplicar_visual_seguro(visual_mesa, mat_mesa, mesh_mesa)
+	_aplicar_visual_seguro(parede_norte, mat_parede_norte, mesh_parede_norte)
+	_aplicar_visual_seguro(parede_sul, mat_parede_sul, mesh_parede_sul)
+	_aplicar_visual_seguro(parede_leste, mat_parede_leste, mesh_parede_leste)
+	_aplicar_visual_seguro(parede_oeste, mat_parede_oeste, mesh_parede_oeste)
+	_aplicar_visual_seguro(teto, mat_teto, mesh_teto)
+	
+	# O fundo tem uma checagem de segurança caso o nó ainda não exista na cena
+	if fundo != null: 
+		_aplicar_visual_seguro(fundo, mat_fundo, mesh_fundo)
 
 # ==========================================
 # FUNÇÃO CAÇADORA DE MALHA 3D

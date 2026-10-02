@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://fyeh3er87q17"]
+
+[ext_resource type="Texture2D" uid="uid://bfnevyx13ic7h" path="res://skins/padrao/cenario/por_do_sol.png" id="1_77hrs"]
+
+[resource]
+cull_mode = 1
+shading_mode = 0
+albedo_texture = ExtResource("1_77hrs")
+disable_receive_shadows = true

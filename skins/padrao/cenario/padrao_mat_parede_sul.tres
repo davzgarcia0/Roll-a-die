@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bcl00tsoiljek"]
+
+[ext_resource type="Texture2D" uid="uid://c5u056h5v1asn" path="res://skins/padrao/cenario/NicolasCage.jpg" id="1_ugf3k"]
+
+[resource]
+albedo_texture = ExtResource("1_ugf3k")
+uv1_scale = Vector3(1.7, 2.1, 2.1)
