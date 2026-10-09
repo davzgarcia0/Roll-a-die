@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ci87e00fa8nkj"]
+
+[ext_resource type="Texture2D" uid="uid://0gk64ref1j1t" path="res://skins/padrao/cenario/fundo_taverna_teste1.jpg" id="1_8wfa0"]
+
+[resource]
+cull_mode = 1
+shading_mode = 0
+albedo_texture = ExtResource("1_8wfa0")
+uv1_scale = Vector3(1, 1.5, 1)
+disable_receive_shadows = true
+billboard_keep_scale = true

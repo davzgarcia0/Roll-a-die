@@ -1,17 +1,15 @@
 [gd_scene format=3 uid="uid://bunp7647tyh7l"]
 
-[ext_resource type="Script" uid="uid://vnv55rmqgo21" path="res://dado_fisica.gd" id="1_vx4nx"]
+[ext_resource type="PhysicsMaterial" uid="uid://bxygumqj6wcah" path="res://geral/materiais/material_fisica_dados.tres" id="1_movub"]
+[ext_resource type="Script" uid="uid://vnv55rmqgo21" path="res://geral/cenas/master/dado_fisica.gd" id="1_vx4nx"]
 [ext_resource type="ArrayMesh" uid="uid://bjh48svsjd08s" path="res://skins/espacial/dados/espacial_mesh_d6.res" id="2_nrqod"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0np0b"]
-bounce = 0.5
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nrqod"]
 points = PackedVector3Array(0.56, 0.56, 0.56, 0.56, 0.56, -0.56, -0.56, 0.56, 0.56, 0.56, -0.56, 0.56, 0.56, -0.56, -0.56, -0.56, 0.56, -0.56, -0.56, -0.56, 0.56, -0.56, -0.56, -0.56)
 
 [node name="Dado_D6" type="RigidBody3D" unique_id=245765482]
-mass = 3.0
-physics_material_override = SubResource("PhysicsMaterial_0np0b")
+mass = 5.0
+physics_material_override = ExtResource("1_movub")
 continuous_cd = true
 contact_monitor = true
 max_contacts_reported = 3

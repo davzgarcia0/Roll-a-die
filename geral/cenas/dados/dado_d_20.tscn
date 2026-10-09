@@ -1,17 +1,15 @@
 [gd_scene format=3 uid="uid://dapwyjen2d3f0"]
 
-[ext_resource type="Script" uid="uid://vnv55rmqgo21" path="res://dado_fisica.gd" id="1_mhoqr"]
+[ext_resource type="PhysicsMaterial" uid="uid://bxygumqj6wcah" path="res://geral/materiais/material_fisica_dados.tres" id="1_d3boh"]
+[ext_resource type="Script" uid="uid://vnv55rmqgo21" path="res://geral/cenas/master/dado_fisica.gd" id="1_mhoqr"]
 [ext_resource type="ArrayMesh" uid="uid://bnm51y5s4nbpy" path="res://skins/espacial/dados/espacial_mesh_d20.res" id="2_ms3ie"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gbro5"]
-bounce = 0.5
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_g2uqm"]
 points = PackedVector3Array(0.5255784, 0.85048425, -0.00016647577, 0.85048425, -0.00016647577, -0.5257448, -0.00016647577, 0.5255784, -0.8506508, -0.5257448, 0.85048425, -0.00016647577, -0.00016647577, 0.5255784, 0.85048425, 0.85048425, -0.00016647577, 0.5255784, 0.5255784, -0.8506508, -0.00016647577, -0.00016647577, -0.5257448, -0.8506508, -0.8506508, -0.00016647577, -0.5257448, -0.8506508, -0.00016647577, 0.5255784, -0.00016647577, -0.5257448, 0.85048425, -0.5257448, -0.8506508, -0.00016647577)
 
 [node name="Dado_D20" type="RigidBody3D" unique_id=817503398]
-mass = 3.0
-physics_material_override = SubResource("PhysicsMaterial_gbro5")
+mass = 5.0
+physics_material_override = ExtResource("1_d3boh")
 continuous_cd = true
 contact_monitor = true
 max_contacts_reported = 3
@@ -21,7 +19,6 @@ script = ExtResource("1_mhoqr")
 mesh = ExtResource("2_ms3ie")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2034613436]
-visible = false
 shape = SubResource("ConvexPolygonShape3D_g2uqm")
 
 [node name="Faces" type="Node3D" parent="." unique_id=14425139]
@@ -79,6 +76,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45879397, 0.45879397, -0.4
 
 [node name="18" type="Marker3D" parent="Faces" unique_id=845098212]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.74234426, -0.28355026, 0)
+
+[node name="19" type="Marker3D" parent="Faces" unique_id=1509466320]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.742, -0.284, 0)
 
 [node name="20" type="Marker3D" parent="Faces" unique_id=881368578]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45879397, 0.45879397, 0.45879397)

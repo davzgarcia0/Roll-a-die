@@ -1,17 +1,15 @@
 [gd_scene format=3 uid="uid://cv41p1tmxrav4"]
 
-[ext_resource type="Script" uid="uid://vnv55rmqgo21" path="res://dado_fisica.gd" id="1_kk3dj"]
+[ext_resource type="Script" uid="uid://vnv55rmqgo21" path="res://geral/cenas/master/dado_fisica.gd" id="1_kk3dj"]
+[ext_resource type="PhysicsMaterial" uid="uid://bxygumqj6wcah" path="res://geral/materiais/material_fisica_dados.tres" id="1_lbblo"]
 [ext_resource type="ArrayMesh" uid="uid://cgqqi7mtmvgbu" path="res://skins/espacial/dados/espacial_mesh_d4.res" id="2_k6g0m"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_itntr"]
-bounce = 0.5
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_sikmb"]
 points = PackedVector3Array(0.942809, -0.3333333, 0, -0.47140452, -0.3333333, 0.8164966, -0.47140452, -0.3333333, -0.8164966, -4.6163797e-05, 0.99999994, 0)
 
 [node name="Dado_D4" type="RigidBody3D" unique_id=159289073]
-mass = 3.0
-physics_material_override = SubResource("PhysicsMaterial_itntr")
+mass = 5.0
+physics_material_override = ExtResource("1_lbblo")
 continuous_cd = true
 contact_monitor = true
 max_contacts_reported = 3

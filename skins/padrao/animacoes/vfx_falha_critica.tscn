@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://caf54p83o74cy"]
+
+[ext_resource type="Script" uid="uid://ci1llbuxwry5y" path="res://skins/padrao/animacoes/vfx_falha_critica.gd" id="1_8oa5n"]
+[ext_resource type="Texture2D" uid="uid://6dhqm7mgi6s2" path="res://geral/efeitos/smoke.png" id="2_s255m"]
+
+[sub_resource type="Gradient" id="Gradient_555rg"]
+offsets = PackedFloat32Array(0, 0.24390244, 0.597561, 0.8414634, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 0.9563459, 0, 1, 1, 0.07269287, 0, 1, 0.3764706, 0.3764706, 0.3764706, 1, 0.36862746, 0.3647059, 0.3647059, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vuavx"]
+gradient = SubResource("Gradient_555rg")
+
+[sub_resource type="Curve" id="Curve_vfnn1"]
+_data = [Vector2(0, 0.47191018), 0.0, 0.0, 0, 0, Vector2(0.20370369, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_snpak"]
+curve = SubResource("Curve_vfnn1")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0tadt"]
+spread = 180.0
+initial_velocity_min = 8.0
+initial_velocity_max = 8.0
+use_rotation_velocity_3d = true
+rotation_velocity_3d_min = Vector3(0, 0, 0)
+rotation_velocity_3d_max = Vector3(0, 0, 0)
+gravity = Vector3(0, 1, 0)
+damping_min = 8.0
+damping_max = 8.0
+scale_curve = SubResource("CurveTexture_snpak")
+color_ramp = SubResource("GradientTexture1D_vuavx")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rvhrt"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_s255m")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_vq4cq"]
+material = SubResource("StandardMaterial3D_rvhrt")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_ak7kn"]
+offsets = PackedFloat32Array(0, 0.58536583, 1)
+colors = PackedColorArray(0.89800006, 0.9735091, 0, 1, 1, 0.7015958, 0.033067524, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4ifj4"]
+gradient = SubResource("Gradient_ak7kn")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_snpak"]
+spread = 180.0
+initial_velocity_min = 15.0
+initial_velocity_max = 25.0
+color_ramp = SubResource("GradientTexture1D_4ifj4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0tadt"]
+shading_mode = 0
+vertex_color_use_as_albedo = true
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_plaxu"]
+material = SubResource("StandardMaterial3D_0tadt")
+size = Vector2(0.1, 0.1)
+
+[node name="VFX_Falha_Critica" type="Node3D" unique_id=854594333]
+script = ExtResource("1_8oa5n")
+
+[node name="Fogo" type="GPUParticles3D" parent="." unique_id=760777751]
+emitting = false
+amount = 1000
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_0tadt")
+draw_pass_1 = SubResource("QuadMesh_vq4cq")
+
+[node name="Faiscas" type="GPUParticles3D" parent="." unique_id=1261855849]
+emitting = false
+amount = 50
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_snpak")
+draw_pass_1 = SubResource("QuadMesh_plaxu")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1874726418]
+light_color = Color(1, 0.54507893, 0, 1)
+light_energy = 16.0

@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://0yui5ta61r68"]
+
+[ext_resource type="SphereMesh" uid="uid://dt1b5tyygmc54" path="res://skins/padrao/cenario/fundo1.tres" id="1_cc06y"]
+[ext_resource type="Material" uid="uid://gsxsaed8qct8" path="res://skins/padrao/cenario/fundo1.res" id="2_avo2g"]
+[ext_resource type="ArrayMesh" uid="uid://d3flu1xlmr41n" path="res://skins/padrao/cenario/mesa.tres" id="3_rhdke"]
+[ext_resource type="ArrayMesh" uid="uid://bjxm7ugpyv8my" path="res://skins/padrao/cenario/caneco.tres" id="4_ptjqe"]
+[ext_resource type="ArrayMesh" uid="uid://b7ko64dn6lpg3" path="res://skins/padrao/cenario/adaga1.tres" id="5_07idg"]
+[ext_resource type="Script" uid="uid://pt48ch1ty48w" path="res://skins/padrao/cenario/luz_velas.gd" id="5_avo2g"]
+[ext_resource type="ArrayMesh" uid="uid://g205beno3anw" path="res://skins/padrao/cenario/adaga2.tres" id="6_oi6pd"]
+[ext_resource type="ArrayMesh" uid="uid://b4kd0iy78j485" path="res://skins/padrao/cenario/bag.tres" id="7_ptjqe"]
+
+[node name="Cenario_Taverna" type="Node3D" unique_id=723558229]
+
+[node name="VisualFundo" type="MeshInstance3D" parent="." unique_id=997068961]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+mesh = ExtResource("1_cc06y")
+surface_material_override/0 = ExtResource("2_avo2g")
+
+[node name="VisualMesa" type="MeshInstance3D" parent="." unique_id=996601446]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 0, 0.5, 0)
+mesh = ExtResource("3_rhdke")
+
+[node name="caneco" type="MeshInstance3D" parent="." unique_id=806030901]
+transform = Transform3D(4.8778725, 0, -1.0983456, 0, 5, 0, 1.0983456, 0, 4.8778725, -20, 6.5, 2)
+mesh = ExtResource("4_ptjqe")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1095916269]
+transform = Transform3D(0.34497938, -0.6636978, 0.6636976, -2.4677007e-09, 0.70710665, 0.70710695, -0.9386103, -0.24393727, 0.24393721, 33.04257, 10, 26.707579)
+light_color = Color(1, 0.6, 0.2, 1)
+light_energy = 2.0
+shadow_enabled = true
+shadow_blur = 10.0
+directional_shadow_split_2 = 0.4
+directional_shadow_split_3 = 0.8
+directional_shadow_blend_splits = true
+directional_shadow_fade_start = 0.2
+directional_shadow_max_distance = 25.0
+directional_shadow_pancake_size = 10.0
+script = ExtResource("5_avo2g")
+cor_quente = Color(2.1714466, 2.1714466, 0, 1)
+cor_fria = Color(1.0560689, 0.47327283, 0.12723762, 1)
+velocidade_da_chama = 10.0
+
+[node name="Adaga" type="MeshInstance3D" parent="." unique_id=181737988]
+transform = Transform3D(1.4412546, -4.7666135, -0.4496429, 1.4891154, 3.0471838e-07, 4.7731056, -4.55031, -1.5097661, 1.419608, 23.873165, 21.110907, 0.03762436)
+mesh = ExtResource("5_07idg")
+
+[node name="Adaga_2" type="MeshInstance3D" parent="." unique_id=306602599]
+transform = Transform3D(-2.5595536, 0.16851835, -4.291886, -0.048107233, -4.9969606, -0.16751301, -4.294922, -0.04445704, 2.5596201, -0.09419727, 1.1102762, 24.17596)
+mesh = ExtResource("6_oi6pd")
+
+[node name="bag" type="MeshInstance3D" parent="." unique_id=959292075]
+transform = Transform3D(-0.676268, 2.4894538, -1.5314308, -2.9128754, -0.70336914, 0.14292467, -0.24045229, 1.5191743, 2.575712, 3.52, 3.2, -25.694)
+mesh = ExtResource("7_ptjqe")

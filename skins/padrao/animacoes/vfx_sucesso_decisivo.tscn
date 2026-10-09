@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://dxikarlkb22od"]
+
+[ext_resource type="Texture2D" uid="uid://bxxjlwu7g8adx" path="res://geral/efeitos/spark.png" id="1_4vmre"]
+
+[sub_resource type="Gradient" id="Gradient_ikhe3"]
+offsets = PackedFloat32Array(0, 0.64634144, 1)
+colors = PackedColorArray(0.99323857, 0.99323857, 0.99323857, 1, 1, 0.90079284, 0, 1, 0.52156866, 0.96862745, 0.5137255, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dbejy"]
+gradient = SubResource("Gradient_ikhe3")
+
+[sub_resource type="Curve" id="Curve_fojmg"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.962963, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_7q8rh"]
+curve = SubResource("Curve_fojmg")
+
+[sub_resource type="Curve" id="Curve_x4y1p"]
+_data = [Vector2(0, 0.011235952), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_ctsbx"]
+curve = SubResource("Curve_x4y1p")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_snpak"]
+emission_shape_scale = Vector3(0.5, 1, 0.5)
+emission_shape = 6
+emission_ring_axis = Vector3(0, 1, 0)
+emission_ring_height = 0.0
+emission_ring_radius = 1.5
+emission_ring_inner_radius = 1.0
+emission_ring_cone_angle = 90.0
+direction = Vector3(0, 1, 0)
+spread = 0.0
+initial_velocity_min = 2.0
+initial_velocity_max = 6.0
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 4.9999976
+radial_accel_max = 19.999998
+tangential_accel_min = 4.9999976
+tangential_accel_max = 11.999997
+damping_min = 4.0
+damping_max = 8.0
+scale_curve = SubResource("CurveTexture_7q8rh")
+color_ramp = SubResource("GradientTexture1D_dbejy")
+turbulence_noise_scale = 5.0
+turbulence_influence_min = 1.0
+turbulence_influence_max = 1.0
+turbulence_influence_over_life = SubResource("CurveTexture_ctsbx")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0tadt"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_4vmre")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_vq4cq"]
+material = SubResource("StandardMaterial3D_0tadt")
+size = Vector2(0.1, 0.1)
+
+[node name="vfx_Sucesso_Decisivo" type="Node3D" unique_id=1615519859]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=972544720]
+emitting = false
+amount = 1000
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_snpak")
+draw_pass_1 = SubResource("QuadMesh_vq4cq")

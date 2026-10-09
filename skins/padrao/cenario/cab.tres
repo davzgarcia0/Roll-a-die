@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dixd7iuh6ec7p"]
+
+[resource]
+resource_name = "Cab.001"
+cull_mode = 2
+albedo_color = Color(0.5658882, 0.31600133, 0.12386021, 1)
+roughness = 0.5
